@@ -2,9 +2,9 @@ Have you ever wanted to add a customized feature or automate and improve your wo
 
 In this course, you’ll learn how to:
 
-- Work with APIs by be introduced to GitHub's REST and GraphQL APIs
-- Incorporate webhooks into your project
+- Work with APIs by being introduced to GitHub's REST and GraphQL APIs
+- Understand the use and importance of webhooks in your project
 - Understand how GitHub Apps fit into the SDLC ecosystem
-- Install a GitHub App 
+- Install a Probot GitHub App on your repository
 
 This course has a dedicated message board on the [GitHub Community]({{ communityBoard }}) website. If you want to discuss this course with GitHub Trainers or other participants create a post over there. The message board can also be used to troubleshoot any issue you encounter while taking this course.
