@@ -1,6 +1,6 @@
 ## Outline (3 separate courses)
 
-### Introduction to GitHub Apps OR What is a GitHub App? OR Automating GitHub
+### Introduction to GitHub Apps
 - Intro to APIs (video?)
   - Ref: https://www.youtube.com/watch?v=s7wmiS2mSXY (one of my favorite instructional videos on YouTube)
   - REST vs. GraphQL
@@ -15,13 +15,14 @@
     - https://probot.github.io/apps/
   - What is it? 
     - How is a Probot app different from a standard GitHub App? 
+    - Permissions
   - Installing your own app
 
 ---
 
 ### Building a GitHub App using Probot (basic)
 
-Activity: Triaging GitHub issues (auto-labler) 
+Activity: Triaging GitHub issues (auto-translator) 
 
 - Forming basic API calls and responses
   - REST and GraphQL (course preferences?) 
