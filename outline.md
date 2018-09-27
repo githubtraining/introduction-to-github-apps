@@ -16,7 +16,7 @@
   - What is it? 
     - How is a Probot app different from a standard GitHub App? 
     - Permissions
-  - Installing your own app
+  - Installing reminder bot
 
 ---
 
