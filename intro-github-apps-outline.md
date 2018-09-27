@@ -52,7 +52,7 @@
 
 ### Step 7: Introduction to APIs
 
-*Note:* In this step the bot will respond with an example curl request the user and use on their command line but not action is required.
+*Note:* In this step the bot will respond with an example curl request the user can use in their command prompt but no action is required.
 
 - Step 7 concludes when the learner closes the issue
 - **App response:** Use the text in `responses/02_next_issue.md`, close the issue and open next issue
