@@ -1,0 +1,81 @@
+title: Introduction to GitHub Apps
+tagline: A quick and tidy overview to reinforce foundational knowledge working with GitHub Apps
+description: 
+template:
+  name: 
+before:
+  - type: createIssue
+    title: Introduction to APIs
+    body: 01_apis-intro.md
+steps:
+  - title: Learn about APIs
+    description: Watch and read about REST and GraphQL APIs
+    event: issues.closed
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    actions:
+    [IF CLOSED - REOPEN ISSUE - Add intro to webhooks file]
+    body: 01_webhooks_intro.md
+    [IF COMMENT - LEAVE COMMENT with API Check for Understanding 1 (CFU) 01_api-cfu-1.md]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 01_api-cfu-2.md. IF INCORRECT, LEAVE CORRECTION COMMENT 01_api-cfu-1-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 01_api-cfu-3.md. IF INCORRECT, LEAVE CORRECTION COMMENT 01_api-cfu-2-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CLOSED, open intro to webhooks file 01_webhooks_intro.md
+
+  - title: Learn about webhooks
+    description: Watch and read about webhooks and events on GitHub
+    event: issues.closed
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+    [IF CLOSED - open next issue 02_intro-to-github-apps.md]
+    body: 02_intro-to-github-apps.md
+    [IF COMMENT - LEAVE COMMENT with webhook Check for Understanding 1 (CFU) 01_webhook-cfu-1.md]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 01_webhook-cfu-2.md. IF INCORRECT, LEAVE CORRECTION COMMENT 01_webhook-cfu-1-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 01_webhook-cfu-3.md. IF INCORRECT, LEAVE CORRECTION COMMENT 01_webhook-cfu-2-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CLOSED, open intro to apps in new issue 02_intro-to-github-apps.md
+
+  - title: Discovering GitHub Apps (and Probot)
+    description: Learn all about how GitHub Apps work (and how to make them easier to build and share)
+    event: issues.closed
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+    [IF CLOSED - open next issue 03_installing-reminder-bot.md]
+    body: 03_installing-reminder-bot.md
+    [IF COMMENT - LEAVE COMMENT with apps Check for Understanding 1 (CFU) 02_apps-cfu-1.md]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 02_apps-cfu-2.md. IF INCORRECT, LEAVE CORRECTION COMMENT 02_apps-cfu-1-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CORRECT, LEAVE NEXT COMMENT/CFU 02_apps-cfu-3.md. IF INCORRECT, LEAVE CORRECTION COMMENT 02_apps-cfu-2-wrong.md.]
+    [USER SELECTS A TASK LIST OPTION]
+      - [IF CLOSED, open intro to apps in new issue 03_installing-reminder-bot.md
+
+
+  - title: Installing your first Probot App
+    description: Install the reminder app to your repository
+    event: issues.closed
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+    [USER INSTALLS REMINDER APP]
+    [BOT RESPONDS WITH COMMENT -- 03_installation-success.md]
+
+  - title: Testing your application
+    description: Make sure your app works correctly
+    event: 
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+    [USER LEAVES COMMENT - REMINDER COMMAND]
+    [BOT CHECKS THAT REMINDER BOT RESPONDS]
+    [BOT RESPONDS WITH CONGRATULATIONS MESSAGE]      
+
+
+tags:
+  - Git
+  - GitHub
+  - Apps
+  - Probot
+
+order: ???
