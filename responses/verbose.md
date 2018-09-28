@@ -12,7 +12,7 @@ TITLE: Introduction to GitHub Apps
 TEXT:
 What's an app?
 How does this work on GitHub?
-Why would people use it?
+Why would people use it???
 
 <include SDLC ecosystem fit>
 "Essentially: If you use GitHub for any part of the SDLC, chances are you can automate the process."
