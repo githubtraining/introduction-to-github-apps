@@ -76,12 +76,48 @@ BOT: Responds with 01_first-class-actor.md
 
 TEXT:
 
-Brief history lesson of how apps/bots work and impact seats.
-Permissions are handled differently now.
-OAUTH vs GitHub App: https://developer.github.com/apps/differences-between-apps/
+Now that we have a foundational understanding of Apps, let's talk about how all of this fits in to history and the greater ecosystem.
 
-Prompt: Try to assign `Lab` to this issue. Notice that you can't? Look at us reinforcing material. Assign yourself instead.   
+If you're not interested and want to get your hands dirty, go ahead and jump down to the activity at the bottom of this comment.
 
+### The SDLC
+
+The software development lifecycle, or **SDLC**, is a complex process. Did you know that the people (aka the ambiguous "they") who categorize things decided there were 6-7 components ("they" haven't reached a consensus) for software-building success?
+
+> Planning -> Requirements -> Design + Prototypes -> Software Development -> Testing -> Deployment -> Operations + Maintenance
+
+If you use GitHub for any part of the SDLC already, chances are you can automate that process via GitHub Apps. If you don't already use GitHub for your whole process, a GitHub App might allow you to build the functionality currently missing, and keep all your software work in one place.
+
+### Apps at GitHub (a history lesson)
+
+Apps on GitHub used to be called bots (have you met my friend Hubot?).
+
+A bot used to do a few things, like:
+- Take up an extra seat on your team's billing account, because they count as a unique user
+- Require maintenance and special permissions
+- Make independent API requests (more on APIs soon)
+- Install with a far greater scope than necessary, granting an entry-point for malicious users to consider attacking
+
+None of these things were ideal. Today, you have two choices, OAuth and GitHub Apps.
+
+| OAuth App                                                                                                                                                                                                                                              | GitHub App                                                                                                                                                      |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Installed on all repositories a user has access to.                                                                                                                                                                                                    | Connects to a personal account or an organization, but is installed on a specific repository for a specific purpose.                                            |
+| Can be connected directly to a specific service, which may perform a variety of behaviors (think CI, Deploy, and Security services).                                                                                                                   | Can be connected to GitHub, Slack, other in-house apps you may have, email programs, or other APIs                                                              |
+| Needs hosting.                                                                                                                                                                                                                                         | Needs hosting.                                                                                                                                                  |
+| Good for complex processes.                                                                                                                                                                                                                            | Good for specific purposes and simple scripting.                                                                                                                |
+| Can be used as an identity provider by enabling a "Login with GitHub" for the authenticated user                                                                                                                                                       | Don't use a GitHub App if you just need a "Login with GitHub" service. But a GitHub App can use a user identification flow to log users in and do other things. |
+| should always act as the authenticated GitHub user across all of GitHub (for example, when providing user notifications).                                                                                                                              | Don't build a GitHub App if you only want to act as a GitHub user and do everything that user can do.                                                           |
+| Don't build an OAuth App to act as an application for your team or company. OAuth Apps authenticate as a single user, so if one person creates an OAuth App for a company to use, and then they leave the company, no one else will have access to it. | A GitHub App should take actions independent of a user (unless the app is using a user-to-server token).                                                        |
+|                                                                                                                                                                                                                                                        |                                                                                                                                                                 |
+
+Remember, this course is all about GitHub Apps.
+
+Extended Resource: https://developer.github.com/apps/differences-between-apps/
+
+Try to assign me, `Lab`, to this issue. Notice that you can't? That's because I'm not a real user, and I won't act like one, either! You can't tell me what to do! Look at me reinforcing material. Assign yourself instead.
+
+Prompt: Assign yourself to this issue.
 ---
 
 USER: Assigns themselves to the issue
