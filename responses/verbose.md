@@ -145,10 +145,16 @@ Every GitHub App needs:
 
 Next up, let's look at a real live GitHub App! Close this issue and I'll meet you in a pull request so that we can experiment.
 
+Prompt: Close issue.
 ---
 
 USER: closes issue
-BOT: Opens the next PR from responses/02_app-install-response.md. Edits README.md?
+BOT: Adds comment from responses/01_close-issue-1.md. Opens the next PR from responses/02_wip-app-prompt.md. Edits README.md?
+
+Prompt: Find my next instructions in [this PR](LINKMELINKME).
+
+---
+User: Clicks link to first PR,
 
 ### Pull Request 1
 
