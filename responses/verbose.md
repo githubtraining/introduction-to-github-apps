@@ -202,14 +202,14 @@ TEXT:
 
 Remember that every time you perform an action on a website, you're generating data. For GitHub, many of those standard actions are recognizable as specific events, like creating a new issue, or leaving a comment.
 
-Each GitHub App specializes in different events, to perform routine behaviors (remember that it's similar to a security monitoring system looking for action in a specific part of your home). Here's what's happening for the WIP app.
+Each GitHub App specializes in different events, to perform routine behaviors. Remember that it's similar to a security monitoring system, looking for actions like movement or noise in a specific part of your home. Here's what's happening for the WIP app.
 
-1. The app waits for a change to a PR subject.
-2. If a PR title changes, the API searches for the key-word, "WIP".
+1. The app waits for a change to a PR subject line.
+2. If a PR title changes, the app searches for the key-word, "WIP".
 3. If "WIP" is added to a subject, the app will then send a pre-defined request to GitHub's API, to perform a specific behavior.
-4. In this case, the API is used to change the PR behavior and block a merge.
+4. In this case, the GitHub API is used to change the PR behavior and block a merge.
 
-Prompt: Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment. 
+Prompt: Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment.
 
 ---
 
@@ -220,7 +220,11 @@ BOT: Listens for PR success. Responds with 02_intro-apis.md
 
 TEXT:
 
-Webhook events work because of APIs. When you trigger events, you're communicating with GitHub's API.
+APIs and Webhooks go hand in hand, but the distinction between them is important.
+
+- Webhooks are specific "noise" interpreters. They wait for events to act as their trigger.
+- The GitHub API actually makes changes to the platform once it has been notified by the webhook. Knowing both the GitHub API and GitHub's webhooks will give you needed context to later customize the platform for your needs.  
+
 [Add Diagram]
 
 Prompt: Merge this PR and we'll go see just how complex these apps can get.
@@ -234,9 +238,13 @@ BOT: Opens new issue with responses/03_reminder-app-prompt.md
 
 03_reminder-app-prompt.md - PR
 
-TEXT: Let's install another App! Last time we used a PR, this time it's an issue. So versatile.
+TEXT:
 
-Prompt: Install the reminder app.
+Let's install another App! Last time we used a PR, this time it's an issue. So versatile.
+
+For the final exercise, we're going to install another app to this repository, and really dig into the components that make it work.
+
+Prompt: Install the reminder app on this repository only. Don't apply it to every repository that you're working with.
 
 ---
 
@@ -245,7 +253,11 @@ BOT: Validates installation and responds with 03_reminder-install-success.md
 
 03_reminder-install-success.md - COMMENT
 
-TEXT: Hey you did it. This one is a bit different and will impact different webhooks. Let's test it.
+TEXT:
+
+Great job! By following the link, you may have already seen the images that teach you how this app works.
+
+While you follow the next steps, try to think about which webhook events are being activated. [LINK TO WEBHOOKS]. Then, consider what steps the app must know to interact with the GitHub API.
 
 Prompt: Leave a reminder command. Example: Remind me to [do something] in a minute (ideally less time, let's experiment).
 
@@ -258,27 +270,52 @@ BOT: Responds to issue comment with 03_arbitrary-webhook.md
 
 TEXT:
 
-How does this magic work? How does it persist through time?
-Is the bot listening to everything I do? Is it stealing my data? No, watch what happens if you do something the bot isn't designed to look for.
+> How does this magic work?
 
-Prompt: Do a specific webhook that's wrong.
+As we dig into the documentation, we should see that the issue.comment is the webhook that triggers the GitHub API.
+
+However, for this application, the behavior is slightly different. Generally webhooks call on the API to perform an immediate action.
+
+In this case, returning to leave a comment at a later time adds some complexity beyond what is typically expected. This requires storage as well as GitHub API use.
+
+MORE DETAIL NEEDED WITH WIFI
+
+Each app is
+
+> Is the bot listening to everything I do? Is it stealing my data?
+
+Nope! Each application will ask you for specific permission to accomplish its purpose. In this case, the app might scan for your issue context, but only to seek out the `/reminder` keyword.
+
+You can even test this out! Watch what happens if you do something the bot isn't designed to look for by closing the issue instead.
+
+Prompt: Close the issue.
 
 ---
 
-USER: Does something wrong
-BOT: Responds to arbitrary webhook with 03_closing-statement.md
+USER: Closes issue.
+BOT: Re-opens issue. Responds with 03_closing-statement.md
 
 03_closing-statement.md - COMMENT
 
 TEXT:
 
-Look at that! Reminder and WIP didn't do anything, even though you took an action. Remember, it's a security camera that's designed to look into a specific place. The only reason Lab knows this even happened is because we were looking for the specific arbitrary webhook that we assigned you. Surprise! I've been an app this whole time.  
+Look at that! Both the reminder app and the WIP app stayed silent, even though you took an action. Remember, webhooks are security cameras designed to look into a specific place.
 
-Prompt: Close this issue. You've done it.
+The only reason I know this happened is because I was looking for you to close the issue!
+
+Surprise! I've been an app this whole time. I know, I know. I didn't fool you.
+
+Prompt: For your last step, ask the reminder application to remind you to come back in a month and do another course! I'd love to teach you even more about Apps, including how to build one! Our next course should be published in a month.  
 
 ---
-USER: Closes issue.
-BOT: Opens final issue with 04_graceful-exit.md
+USER: Leaves reminder comment.
+BOT: Closes issue. Posts 03_transition-to-exit.md. Opens final issue with 04_graceful-exit.md
+
+03_transition-to-exit.md - COMMENT
+
+TEXT:
+
+Your last message is waiting [here](issue!). Great job on the course!
 
 ### Issue 3
 
@@ -286,4 +323,4 @@ BOT: Opens final issue with 04_graceful-exit.md
 
 TEXT:
 
-Well done. Set a reminder to come back and do another course soon! Want to learn how to build a bot? Our next course will be published within a month.
+Standard congratulations message and recap.
