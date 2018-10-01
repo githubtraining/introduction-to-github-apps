@@ -162,11 +162,16 @@ User: Clicks link to first PR,
 
 TEXT:
 
-Introduce Probot.
+Some of the coolest GitHub Apps out there were made with [Probot](https://probot.github.io/). We'll learn more about Probot later. For now, know this: Most [Probot apps](https://probot.github.io/docs/) are already hosted, easy to install, and easy to discover. There's nothing for you to deploy and manage. Here are just a few examples of things that have been built with Probot:
 
-Check out all the cool things you can do: https://probot.github.io/apps/
+- [Stale](https://probot.github.io/apps/stale/), which closes issues and PRs that have been around for just a bit too long without activity.
+- [Delete merged branch](https://probot.github.io/apps/delete-merged-branch/), so that you don't have to remember to do this after a merge.
+- [First timers](https://probot.github.io/apps/first-timers/), which creates a starter issue to help you onboard new open source contributors to your community.
 
-Hey user, install the WIP app (to this repo only, don't apply it to everything you have access to.)
+
+ACTIVITY:
+
+We're going to start by installing the [WIP app](https://probot.github.io/apps/wip/) (to this repo only, don't apply it to everything you have access to.)
  - Screenshot
 
 Prompt: Install WIP
@@ -179,6 +184,8 @@ BOT: Bot validates that app has been installed. Responds with 02_wip-success.md
 02_wip-install-success.md - COMMENT
 
 TEXT:
+
+Probot is a framework to help you build a GitHub App, using Node.js. Comparatively, it's simple! In the background, it handles all the drudgery–like receiving and validating webhooks, and doing authentication handstands.
 
 Now that your app has been installed, let's make sure it works.
 
