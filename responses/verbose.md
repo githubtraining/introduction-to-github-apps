@@ -200,9 +200,16 @@ BOT: Waits for merge to be blocked. Responds with 02_intro-webhooks.md
 
 TEXT:
 
-Introduce what webhooks are. This webhook alters the [lookthisup] event.
+Remember that every time you perform an action on a website, you're generating data. For GitHub, many of those standard actions are recognizable as specific events, like creating a new issue, or leaving a comment.
 
-Prompt: Change title of PR, remove WIP.
+Each GitHub App specializes in different events, to perform routine behaviors (remember that it's similar to a security monitoring system looking for action in a specific part of your home). Here's what's happening for the WIP app.
+
+1. The app waits for a change to a PR subject.
+2. If a PR title changes, the API searches for the key-word, "WIP".
+3. If "WIP" is added to a subject, the app will then send a pre-defined request to GitHub's API, to perform a specific behavior.
+4. In this case, the API is used to change the PR behavior and block a merge.
+
+Prompt: Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment. 
 
 ---
 
