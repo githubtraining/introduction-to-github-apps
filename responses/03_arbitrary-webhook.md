@@ -16,4 +16,9 @@ Nope! Each application will ask you for specific permission to accomplish its pu
 
 You can even test this out! Watch what happens if you do something the bot isn't designed to look for by closing the issue instead.
 
-Prompt: Close the issue.
+### :keyboard: Activity: Close this issue
+
+1. Close this issue
+
+<hr>
+<h3 align="center">Look for my response in a comment on this issue</h3>

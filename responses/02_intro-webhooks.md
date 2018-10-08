@@ -9,4 +9,11 @@ Here's what's happening under-the-hood with the WIP App.
 3. If "WIP" is added to a subject, the app will then send a pre-defined request to GitHub's API, to perform a specific behavior.
 4. In this case, the GitHub API is used to change the PR behavior and block a merge.
 
-Prompt: Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment.
+Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment.
+
+### :keyboard: Activity: Continued testing
+
+1. Remove [WIP] from the PR title.   
+
+<hr>
+<h3 align="center">Look for my response in a comment on this PR</h3>

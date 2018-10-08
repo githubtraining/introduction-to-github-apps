@@ -5,4 +5,11 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 
 [Add Diagram]
 
-Prompt: Merge this PR and we'll go see just how complex these apps can get.
+Merge this PR and we'll go see just how complex these apps can get.
+
+### :keyboard: Activity: Continued testing
+
+1. Click 'Merge pull request' below
+
+<hr>
+<h3 align="center">Look for my response in a comment on this PR</h3>
