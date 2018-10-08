@@ -4,6 +4,7 @@ description: See how automation can improve your workflow and reduce friction wi
 template:
   name: introduction-to-github-apps-template
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
+  repo: introduction-to-github-apps-template
 before:
   - type: createIssue
     title: Introduction to GitHub Apps
