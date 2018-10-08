@@ -61,3 +61,12 @@ steps:
     event: pull_request.edited
     link: {{ repoUrl }}/pull/1
     actions:
+      - type: gate
+        left: '%payload.pull_request.title%'
+        operator: test
+        right: /\b(wip|do not merge|work in progress)\b/i # grabbed from https://github.com/wip/app/blob/59cbc474de03f32654c2a52cbd1d124f1dd2ac75/lib/handle-pull-request-change.js#L60-L62
+        else:
+          type: respond
+          with: error-message.md
+      - type: respond
+        with: success-message.md
