@@ -56,8 +56,8 @@ steps:
       - type: respond
         with: 02_wip-install-success.md
  
-  - title: Interacting with the WIP Probot App
-    description: See how the WIP Probot App works
+  - title: Interacting with the "WIP" Probot App
+    description: See how a WIP Probot App works
     event: pull_request.edited
     link: {{ repoUrl }}/pull/1
     actions:
@@ -69,4 +69,81 @@ steps:
           type: respond
           with: error-message.md
       - type: respond
-        with: success-message.md
+        with: 02_intro-webhooks.md
+        
+  - title: Getting hooked with webhooks
+    description: Understand what webhooks are and how they work
+    event: pull_request.edited
+    link: {{ repoUrl }}/pull/1
+    actions:
+      - type: gate
+        left: '%payload.pull_request.title%'
+        operator: test
+        right: /\b(wip|do not merge|work in progress)\b/i
+        else:
+          type: respond
+          with: 02_intro-apis.md
+     - type: respond
+       with: error-message.md
+       
+  - title: APIs, at your service
+    description: Understand the basic functions of an API
+    event: pull_request.closed
+    link: {{ repoUrl }}/pull/1
+    actions:
+      - type: gate
+        left: "%payload.pull_request.merged%"
+        else: 
+          - type: respond
+            with: error-message.md
+      - type: createIssue
+        title: Install Reminder Probot App
+        body: 03_reminder-app-prompt.md
+        action_id: new_issue
+      - type: respond
+        with: next-message.md
+        data:
+          url: '%actions.new_issue.data.html_url%'
+     
+  - title: Install Reminder Probot App
+    description: Install another Probot App on your repository
+    event: installation.created
+    link: {{ repoUrl }}/issues/2
+    actions:
+      - type: respond
+        with: 03_reminder-install-success.md
+        
+  - title: Trigger the correct webhook event
+    description: See what happens when arbitrary webhooks are triggered
+    event: issues.closed
+    link: {{ repoUrl }}/issues/2
+    actions:
+      - type: octokit
+        method: issues.edit
+        owner: '%payload.repository.owner.login%'
+        repo: '%payload.repository.name%'
+        number: '%payload.issue.number%'
+        state: open
+      - type: respond
+        with: 03_closing-statement.md
+  
+  - title: Prompt Reminder App Webhook
+    description: Now that the reminder App is installed, it's time to prompt the correct webhook event
+    event: issue_comment.created
+    link: {{ repoUrl }}/issues/2
+    actions:
+      - type: gate
+        left: '%payload.issue_comment%'
+        operator: test
+        right: \n\n\`/remind me [what] [when]\` # grabbed from https://github.com/probot/reminders/blob/master/lib/reminders.js#L29
+        else:
+          respond:
+          with:error-message.md
+      - type: respond
+        with: 03_trasition-to-exit.md
+      - type: createIssue
+        title: Well done!
+        body: 04_graceful-exit.md
+        action_id: final_issue
+        data:
+          url: '%actions.final_issue.data.html_url%'
