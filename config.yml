@@ -1,0 +1,62 @@
+title: Introduction to GitHub Apps
+tagline: Get started with GitHub Apps in a flash
+description: See how automation can improve your workflow and reduce friction with GitHub Apps
+template:
+  name: introduction-to-github-apps-template
+  url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
+before:
+  - type: createIssue
+    title: Introduction to GitHub Apps
+    body: 01_intro-gh-apps.md 
+steps:
+  - title: Introduce yourself
+    description: Leave a comment with your favorite GitHub App
+    event: "issue_comment.created"
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    actions:
+      - type: respond
+        with: 01_first-class-actor.md
+        data:
+          url: '%actions.issue.data.html_url%'
+          
+  - title: Take ownership of the issue 
+    description: Assign the issue to yourself
+    event: "issues.assigned"
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    actions:
+      - type: gate
+        left: "%payload.assignee.login%"
+        operator: "==="
+        right: "%user.username%"
+      - type: respond
+        with: "01_anatomy-github-app.md"
+        
+  - title: Anatomy of a GitHub App
+    description: Understand the anatomy of a GitHub App
+    event: "issues.closed"
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    actions:
+      - type: createPullRequest
+        title: Introduction to Probot
+        body: 02_wip-app-prompt.md
+        action_id: new_pr
+      - type: respond
+        with: 01_close-issue-1.md
+        data: 
+          url: '%actions.new_pr.data.html_url%'
+   
+  - title: Install a GitHub Probot App
+    description: Learn how to install a GitHub Probot App
+    event: installation.created
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/pull/1
+    actions:
+      - type: respond
+        with: 02_wip-success.md
+      - type: respond
+        with: 02_wip-install-success.md
+ 
+  - title: Interacting with the WIP Probot App
+    description: See how the WIP Probot App works
+    event: pull_request.edited
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/pull/1
+    actions:
