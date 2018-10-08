@@ -65,7 +65,14 @@ We'll look at some real examples very soon in this course.
 
 Helpful resource: https://developer.github.com/apps/about-apps/
 
-Prompt: Leave a comment below to let me know what your favorite app (on GitHub, or that you use in your day to day life!) is.
+### :keyboard: Activity: Introduce yourself :tada:
+
+1. Leave a comment on this issue. Tell me what your favorite app (on GitHub, or that you use in your day to day life) is.
+
+<hr>
+<h3 align="center">Look for my response in a comment on this issue</h3>
+
+> _Sometimes I respond too fast for the page to update! If you perform an expected action and don't see a response from me, wait a few seconds and refresh the page for your next steps._
 
 ---
 
@@ -117,7 +124,12 @@ Extended Resource: https://developer.github.com/apps/differences-between-apps/
 
 Try to assign me, `Lab`, to this issue. Notice that you can't? That's because I'm not a real user, and I won't act like one, either! You can't tell me what to do! Look at me reinforcing material. Assign yourself instead.
 
-Prompt: Assign yourself to this issue.
+### :keyboard: Activity: Assign yourself
+
+1. Assign yourself to this issue
+
+<hr>
+<h3 align="center">Look for my response in a comment on this issue</h3>
 ---
 
 USER: Assigns themselves to the issue
@@ -145,7 +157,12 @@ Every GitHub App needs:
 
 Next up, let's look at a real live GitHub App! Close this issue and I'll meet you in a pull request so that we can experiment.
 
-Prompt: Close issue.
+### :keyboard: Activity: Close this issue
+
+1. Close this issue
+
+<hr>
+<h3 align="center">Look for my response in a comment on this issue</h3>
 ---
 
 USER: closes issue
@@ -168,13 +185,16 @@ Some of the coolest GitHub Apps out there were made with [Probot](https://probot
 - [Delete merged branch](https://probot.github.io/apps/delete-merged-branch/), so that you don't have to remember to do this after a merge.
 - [First timers](https://probot.github.io/apps/first-timers/), which creates a starter issue to help you onboard new open source contributors to your community.
 
-
-ACTIVITY:
-
 We're going to start by installing the [WIP app](https://probot.github.io/apps/wip/) (to this repo only, don't apply it to everything you have access to.)
- - Screenshot
+  -
 
-Prompt: Install WIP
+### :keyboard: Activity: Installing an app
+
+1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository.
+  - Don't install on ALL of your repositories. This one will do just fine.  
+
+<hr>
+<h3 align="center">Look for my response in a comment on this pull request</h3>
 
 ---
 
