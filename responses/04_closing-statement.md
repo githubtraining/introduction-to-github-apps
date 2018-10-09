@@ -20,7 +20,7 @@ We'll get into this more in advanced courses, but for now go look at your `Files
 ### :keyboard: Activity: Change the default message of your config.yml file
 
 1. Edit your pull request to change the default yaml file message for request app
-1. Merge your pull request 
+1. Commit your changes
 
 <hr>
-<h3 align="center">After you merge, look for my response below</h3>
+<h3 align="center">After you commit, look for my response below</h3>
