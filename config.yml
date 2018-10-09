@@ -65,7 +65,7 @@ steps:
         right: /\b(wip|do not merge|work in progress)\b/i # grabbed from https://github.com/wip/app/blob/59cbc474de03f32654c2a52cbd1d124f1dd2ac75/lib/handle-pull-request-change.js#L60-L62
         else:
           type: respond
-          with: error-message.md
+          with: 02_WIP-error-message.md
       - type: respond
         with: 02_intro-webhooks.md
         
@@ -82,7 +82,7 @@ steps:
           type: respond
           with: 02_intro-apis.md
      - type: respond
-       with: error-message.md
+       with: 02_WIP-error-message2.md
        
   - title: APIs, at your service
     description: Understand the basic functions of an API
@@ -93,13 +93,13 @@ steps:
         left: "%payload.pull_request.merged%"
         else: 
           - type: respond
-            with: error-message.md
+            with: 02_closed-pr.md
       - type: createIssue
         title: That was so fun, let's do it again!
         body: 03_request-info-app-prompt.md
         action_id: new_issue
       - type: respond
-        with: transition-message.md
+        with: 03_new_issue-transistion.md
         data:
           url: '%actions.new_issue.data.html_url%'
      
