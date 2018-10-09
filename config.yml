@@ -19,7 +19,7 @@ steps:
       - type: respond
         with: 01_wip-actions.md
 
-  - title: Interacting with the Github App
+  - title: Interacting with the GitHub App
     description: Once installed, learn how to interact with the app
     event: "pull_request.edited"
     link: '{{ repoUrl }}/pull/1'
@@ -49,6 +49,7 @@ steps:
           - type: createPullRequest
             title: Practice makes perfect
             body: 02_request-info-app-prompt.md
+            head: request-info
             action_id: new_pr
           - type: respond
             with: 01_merge-success.md
@@ -72,7 +73,7 @@ steps:
     actions:
       - type: getFileContents
         action_id: fileContents
-        filename: config.yml
+        filename: .github/config.yml
       - type: gate
         left: "%payload.pull_request.base.ref%"
         operator: "==="
