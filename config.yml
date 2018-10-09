@@ -13,7 +13,7 @@ steps:
   - title: Introduce yourself
     description: Leave a comment with your favorite GitHub App
     event: "issue_comment.created"
-    link: {{ repoUrl }}/issues/1
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: respond
         with: 01_first-class-actor.md
@@ -23,7 +23,7 @@ steps:
   - title: Take ownership of the issue 
     description: Assign the issue to yourself
     event: "issues.assigned"
-    link: {{ repoUrl }}/issues/1
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: gate
         left: "%payload.assignee.login%"
@@ -35,7 +35,7 @@ steps:
   - title: Anatomy of a GitHub App
     description: Understand the anatomy of a GitHub App
     event: "issues.closed"
-    link: {{ repoUrl }}/issues/1
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: createPullRequest
         title: Introduction to Probot
@@ -49,7 +49,7 @@ steps:
   - title: Install a GitHub Probot App
     description: Learn how to install a GitHub Probot App
     event: installation.created
-    link: {{ repoUrl }}/pull/1
+    link: '{{ repoUrl }}/pull/1'
     actions:
       - type: respond
         with: 02_wip-install-success.md
@@ -57,7 +57,7 @@ steps:
   - title: Interacting with the "WIP" Probot App
     description: See how the WIP Probot App works
     event: pull_request.edited
-    link: {{ repoUrl }}/pull/1
+    link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
@@ -72,7 +72,7 @@ steps:
   - title: Getting hooked with webhooks
     description: Understand what webhooks are and how they work
     event: pull_request.edited
-    link: {{ repoUrl }}/pull/1
+    link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
@@ -81,13 +81,13 @@ steps:
         else:
           type: respond
           with: 02_intro-apis.md
-     - type: respond
-       with: 02_WIP-error-message2.md
+      - type: respond
+        with: 02_WIP-error-message2.md
        
   - title: APIs, at your service
     description: Understand the basic functions of an API
     event: pull_request.closed
-    link: {{ repoUrl }}/pull/1
+    link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: "%payload.pull_request.merged%"
@@ -106,7 +106,7 @@ steps:
   - title: Install Request Info Probot App
     description: Install another Probot App on your repository
     event: installation.created
-    link: {{ repoUrl }}/issues/2
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: respond
         with: 03_request-info-install-success.md
@@ -114,7 +114,7 @@ steps:
   - title: Trigger the correct webhook event
     description: See what happens when arbitrary webhooks are triggered
     event: issues.closed    
-    link: {{ repoUrl }}/issues/2
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: createPullRequest
         action_id: second_pr
@@ -128,7 +128,7 @@ steps:
   - title: Change the config.yml default message
     description: Update the default message in your newly created config.yml file
     event: pull_request
-    link: {{ repoUrl }}/pull/2
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: "%payload.pull_request.base.ref%"
@@ -143,7 +143,7 @@ steps:
   - title: Your last issue
     description: Open a new issue to see your new changes
     event: issue.create
-    link: {{ repoUrl }}/issues/3
+    link: '{{ repoUrl }}/issues/3'
     action:
       - type: respond
         with: 05_graceful-exit.md
