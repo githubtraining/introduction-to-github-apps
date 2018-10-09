@@ -123,7 +123,7 @@ steps:
         body: 04_closing-statement.md
         head: update-default-message
       - type: respond
-        with: next-pull-request.md
+        with: 03_closed.md
         data:
           url: '%actions.second_pr.data.html_url%'
 
