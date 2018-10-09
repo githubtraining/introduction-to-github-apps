@@ -7,7 +7,7 @@ Here's what's happening under-the-hood with the WIP App.
 2. When a pull request title changes, the app searches for the key-word, **"WIP"**
 3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
 
-The way that all of this works relies heavily on webhooks, payloads, and the GitHub API.
+This works by relying heavily on webhooks, payloads, and the GitHub API.
 
 ## Definitions
 APIs and Webhooks go hand in hand, but the distinction between them is important.
@@ -18,7 +18,7 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 
 When you **remove** WIP from the pull request title, I'll automatically merge the unblocked PR and give you a new set of instructions.
 
-<details><summary>Are apps listening to everything I do? Are they stealing my data?</summary>
+<details><summary>Are apps listening to everything I do? Are they stealing my data?</summary></br>
 Nope! Each application will ask you for specific permission to fulfill its purpose. In this case, the app might scan for your issue or pull request context, but only to determine if the content is empty.
 
 This has been happening throughout this course! I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.
