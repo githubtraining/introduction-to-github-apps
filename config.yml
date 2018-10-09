@@ -144,6 +144,6 @@ steps:
     description: Open a new issue to see your new changes
     event: issue.create
     link: '{{ repoUrl }}/issues/3'
-    action:
+    actions:
       - type: respond
         with: 05_graceful-exit.md
