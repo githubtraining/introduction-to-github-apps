@@ -34,4 +34,4 @@ This has been happening throughout this whole course! I've been waiting for you 
 1. Close this issue
 
 <hr>
-<h3 align="center">Look for my response in a comment on your new pull request</h3>
+<h3 align="center">Look for my response below!</h3>
