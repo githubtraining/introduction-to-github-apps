@@ -131,7 +131,7 @@ steps:
     link: {{ repoUrl }}/pull/2
     actions:
       - type: gate
-        left: "%payload.pull_request%"
+        left: "%payload.pull_request.base.ref%"
         operator: "==="
         right: master
         else:
