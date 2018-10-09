@@ -2,73 +2,36 @@ title: Introduction to GitHub Apps
 tagline: Get started with GitHub Apps in a flash
 description: See how automation can improve your workflow and reduce friction with GitHub Apps
 template:
-  name: introduction-to-github-apps-template
+  name: introduction-to-github-apps
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
   repo: introduction-to-github-apps-template
 before:
-  - type: createIssue
+  - type: createPullRequest
     title: Introduction to GitHub Apps
     body: 01_intro-gh-apps.md
 steps:
-  - title: Introduce yourself
-    description: Leave a comment with your favorite GitHub App
-    event: "issue_comment.created"
-    link: '{{ repoUrl }}/issues/1'
-    actions:
-      - type: respond
-        with: 01_first-class-actor.md
-        data:
-          url: '%actions.issue.data.html_url%'
-
-  - title: Take ownership of the issue
-    description: Assign the issue to yourself
-    event: "issues.assigned"
-    link: '{{ repoUrl }}/issues/1'
-    actions:
-      - type: gate
-        left: "%payload.assignee.login%"
-        operator: "==="
-        right: "%user.username%"
-      - type: respond
-        with: "01_anatomy-github-app.md"
-
-  - title: Anatomy of a GitHub App
-    description: Understand the anatomy of a GitHub App
-    event: "issues.closed"
-    link: '{{ repoUrl }}/issues/1'
-    actions:
-      - type: createPullRequest
-        title: Introduction to Probot
-        body: 02_wip-app-prompt.md
-        head: add-WIP-app
-        action_id: new_pr
-      - type: respond
-        with: 01_close-issue-1.md
-        data:
-          url: '%actions.new_pr.data.html_url%'
-
-  - title: Install a GitHub Probot App
-    description: Learn how to install a GitHub Probot App
-    event: installation.created
+  - title: Introduction to GitHub Apps
+    description: Learn what a GitHub App is and how to install it
+    event: "installation.created"
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: respond
-        with: 02_wip-install-success.md
+        with: 01_wip-actions.md
 
-  - title: Interacting with the "WIP" Probot App
-    description: See how the WIP Probot App works
-    event: pull_request.edited
+  - title: Interacting with the Github App
+    description: Once installed, learn how to interact with the app
+    event: "pull_request.edited"
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
         operator: test
-        right: /\b(wip|do not merge|work in progress)\b/i # grabbed from https://github.com/wip/app/blob/59cbc474de03f32654c2a52cbd1d124f1dd2ac75/lib/handle-pull-request-change.js#L60-L62
+        right: /\b(wip|do not merge|work in progress)\b/i
         else:
           type: respond
-          with: 02_WIP-error-message.md
+          with: 02_WIP-error-message2.md
       - type: respond
-        with: 02_intro-webhooks.md
+        with: 01_defining-webhooks-apis.md
 
   - title: Getting hooked with webhooks
     description: Understand what webhooks are and how they work
@@ -80,72 +43,49 @@ steps:
         operator: test
         right: /\b(wip|do not merge|work in progress)\b/i
         else:
-          type: respond
-          with: 02_intro-apis.md
+          - type: mergePullRequest
+            pullRequest: 1 
+          - type: createPullRequest
+            title: Practice makes perfect
+            body: 02_request-info-app-prompt.md
+            action_id: new_pr
+          - type: respond
+            with: 01_merge-success.md
+            data:
+              url: '%actions.new_pr.data.html_url%'    
       - type: respond
         with: 02_WIP-error-message2.md
 
-  - title: APIs, at your service
-    description: Understand the basic functions of an API
-    event: pull_request.closed
-    link: '{{ repoUrl }}/pull/1'
-    actions:
-      - type: gate
-        left: "%payload.pull_request.merged%"
-        else:
-          - type: respond
-            with: 02_closed-pr.md
-      - type: createIssue
-        title: That was so fun, let's do it again!
-        body: 03_request-info-app-prompt.md
-        action_id: new_issue
-      - type: respond
-        with: 03_new_issue-transistion.md
-        data:
-          url: '%actions.new_issue.data.html_url%'
-
   - title: Install Request Info Probot App
-    description: Install another Probot App on your repository
+    description: There are so many GitHub Apps, let's install another one
     event: installation.created
-    link: '{{ repoUrl }}/issues/2'
-    actions:
-      - type: respond
-        with: 03_request-info-install-success.md
-
-  - title: Trigger the correct webhook event
-    description: See what happens when arbitrary webhooks are triggered
-    event: issues.closed
-    link: '{{ repoUrl }}/issues/2'
-    actions:
-      - type: createPullRequest
-        action_id: second_pr
-        title: Updating the default message
-        body: 04_closing-statement.md
-        head: update-default-message
-      - type: respond
-        with: next-pull-request.md
-        data:
-          url: '%actions.second_pr.data.html_url%'
-
-  - title: Change the config.yml default message
-    description: Update the default message in your newly created config.yml file
-    event: pull_request
     link: '{{ repoUrl }}/pull/2'
     actions:
+      - type: respond
+        with: 02_request-info-install-success.md
+
+  - title: Customize your app's response
+    description: Learn how to customize the apps default behavior
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pull/2'
+    actions:
+      - type: getFileContents
+        action_id: fileContents
+        filename: config.yml
       - type: gate
         left: "%payload.pull_request.base.ref%"
         operator: "==="
         right: master
         else:
+          - type: mergePullRequest
+            pullRequest: 2
+          - type: createIssue
+            title: Congratulations!
+            body: 03_graceful-exit.md
+            action_id: last_issue
           - type: respond
-            with: make-changes.md
+            with: 02_change-config-success.md
+            data:
+              url: '%actions.last_issue.data.html_url%'
       - type: respond
-        with: 04_successful-merge.md
-
-  - title: Your last issue
-    description: Open a new issue to see your new changes
-    event: issue.create
-    link: '{{ repoUrl }}/issues/3'
-    actions:
-      - type: respond
-        with: 05_graceful-exit.md
+        with: make-changes.md
