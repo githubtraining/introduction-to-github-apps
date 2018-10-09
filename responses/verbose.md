@@ -298,10 +298,10 @@ While you follow the next steps, try to think about which webhook events are bei
 
 ---
 
-USER: Writes reminder command.
-BOT: Responds to issue comment with 03_arbitrary-webhook.md
+USER: Opens new issue.
+BOT: Responds to new issue with 04_arbitrary-webhook.md. Closes previous issue.
 
-03_arbitrary-webhook.md - COMMENT
+04_arbitrary-webhook.md - COMMENT
 
 TEXT:
 
