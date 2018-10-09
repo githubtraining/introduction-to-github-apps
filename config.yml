@@ -30,7 +30,7 @@ steps:
         right: /\b(wip|do not merge|work in progress)\b/i
         else:
           type: respond
-          with: 02_WIP-error-message2.md
+          with: 02_WIP-error-message.md
       - type: respond
         with: 01_defining-webhooks-apis.md
 
@@ -93,4 +93,4 @@ steps:
             data:
               url: '%actions.last_issue.data.html_url%'
       - type: respond
-        with: make-changes.md
+        with: 03_make-file-changes.md
