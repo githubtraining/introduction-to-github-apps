@@ -186,12 +186,13 @@ Some of the coolest GitHub Apps out there were made with [Probot](https://probot
 - [First timers](https://probot.github.io/apps/first-timers/), which creates a starter issue to help you onboard new open source contributors to your community.
 
 We're going to start by installing the [WIP app](https://probot.github.io/apps/wip/) (to this repo only, don't apply it to everything you have access to.)
-  -
+
+![image](https://user-images.githubusercontent.com/13326548/46620238-05dec680-cad9-11e8-8fb6-583dd5d9d5b0.png)
 
 ### :keyboard: Activity: Installing an app
 
 1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository.
-  - Don't install on ALL of your repositories. This one will do just fine.  
+  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46620238-05dec680-cad9-11e8-8fb6-583dd5d9d5b0.png). This one will do just fine.  
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
@@ -247,16 +248,20 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 
 [Add Diagram]
 
-Prompt: Merge this PR and we'll go see just how complex these apps can get.
+### :keyboard: Activity: Merge this PR
 
+1. Merge this pull request  
+
+<hr>
+<h3 align="center">Look for my response in a comment on this pull request</h3>
 ---
 
 ### Issue 2
 
 USER: Merges PR.
-BOT: Opens new issue with responses/03_reminder-app-prompt.md
+BOT: Opens new issue with responses/03_request-info-app-prompt.md
 
-03_reminder-app-prompt.md - PR
+03_request-info-app-prompt.md - PR
 
 TEXT:
 
@@ -264,7 +269,13 @@ Let's install another App! Last time we used a PR, this time it's an issue. So v
 
 For the final exercise, we're going to install another app to this repository, and really dig into the components that make it work.
 
-Prompt: Install the reminder app on this repository only. Don't apply it to every repository that you're working with.
+### :keyboard: Activity: Installing another app
+
+1. Install the [Reminder app](https://probot.github.io/apps/reminders/) to this repository.
+  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46620432-97e6cf00-cad9-11e8-87eb-7d0c51c12e6d.png). This one will do just fine.  
+
+<hr>
+<h3 align="center">Look for my response in a comment on this pull request</h3>
 
 ---
 
