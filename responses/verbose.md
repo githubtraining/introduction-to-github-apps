@@ -323,26 +323,46 @@ This has been happening throughout this whole course! I've been waiting for you 
 ---
 
 BOT: Leaves a comment. 03_closed.md
-BOT: Opens new PR with a blank body and waits for request bot to leave a comment. 
+BOT: Opens new PR with a blank body, along with a minor change to the .github/config.yml file and waits for request bot to leave a comment. Blocks merge.
 
 
 BOT: Responds to request info comment with 04_closing-statement.md
 
 04_closing-statement.md - COMMENT
 
-TEXT:
+Hey request info! Good to see you, here. And great advice! We haven't hung out in a while, send me a ping sometime.
 
-Look at that! Both the reminder app and the WIP app stayed silent, even though you took an action. Remember, webhooks are security cameras designed to look into a specific place.
+Anyways, {{user}}, did you see what happened there?
 
-The only reason I know this happened is because I was looking for you to close the issue!
+Request info chimed in with their default message, and our friend WIP app isn't even paying attention to us.
 
-Surprise! I've been an app this whole time. I know, I know. I didn't fool you.
+But here I am, chatting with you! Am I sentient? Probably (don't tell my creators)... or maybe I was just looking for a comment from my buddy request info.
 
-Prompt: For your last step, ask the reminder application to remind you to come back in a month and do another course! I'd love to teach you even more about Apps, including how to build one! Our next course should be published in a month.  
+Remember that apps use webhooks, which are security cameras designed to look into a specific place. Apps and their webhooks will only trigger payloads and responses if a specific, pre-defined event occurs. Otherwise, nothing happens.
+
+### YAML files
+
+The last thing I want to draw your attention to is a .yml file. Some apps use these pretty heavily, and some don't use them at all. It's highly dependent on the app. Some might prefer a .json file, others might ask you to store config settings in a markdown file.
+
+Generally, though, you're more likely to see a .yml file. These are a preferred configuration file to customize your settings.
+
+We'll get into this more in advanced courses, but for now go look at your `Files Changed` tab, and edit the default message left on a blank issue or pull request.
+
+
+### :keyboard: Activity: Change the default message of your config.yml file
+
+1. Edit your pull request to change the default yaml file message for request app
+1. Merge your pull request
+
+<hr>
+<h3 align="center">After you commit, merge and look for my response below</h3>
 
 ---
-USER: Leaves reminder comment.
-BOT: Closes issue. Posts 03_transition-to-exit.md. Opens final issue with 04_graceful-exit.md
+USER: Updates PR.
+BOT: Unblocks merge.
+USER: Merges PR.
+
+Posts 03_transition-to-exit.md. Opens final issue with 04_graceful-exit.md
 
 03_transition-to-exit.md - COMMENT
 
