@@ -8,6 +8,7 @@ template:
 before:
   - type: createPullRequest
     title: Introduction to GitHub Apps
+    head: intro-gh-apps
     body: 01_intro-gh-apps.md
 steps:
   - title: Introduction to GitHub Apps
