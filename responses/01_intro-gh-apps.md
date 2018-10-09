@@ -1,8 +1,10 @@
 # Welcome to the Introduction to GitHub Apps course
 
-Before we start using real GitHub applications, let's get some foundations out of the way. Note: this course assumes that you've previously completed the "Introduction to GitHub" Learning Lab course.
+Before we start using real GitHub applications, let's get some foundations out of the way. 
 
-### Application vs GitHub Application
+Note: this course assumes that you've previously completed the ["Introduction to GitHub"](https://lab.github.com/githubtraining/introduction-to-github) Learning Lab course.
+
+## Application vs GitHub Application
 There are many types of applications, like the apps you might have on your phone. In this course, we'll focus on **GitHub Applications**, apps designed to work on GitHub.
 
 GitHub Apps allow you to change GitHub's surface-level functionality. With webhooks and GitHub's APIs, GitHub Apps act as top-layer tools that you can use to customize and automate routine processes. 
