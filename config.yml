@@ -71,13 +71,16 @@ steps:
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/2'
     actions:
-      - type: getFileContents
-        action_id: fileContents
-        filename: .github/config.yml
+      - type: octokit
+        method: pullRequests.getFiles
+        owner: '%payload.repository.owner.login%'
+        name: '%payload.repository.name%'
+        number: '%payload.pull_request.number%'
+        action_id: pr_files
       - type: gate
-        left: "%payload.pull_request.base.ref%"
-        operator: "==="
-        right: master
+        left: '%actions.pr_files.data%'
+        operator: includes
+        right: 'filename:config.yml'
         else:
           - type: mergePullRequest
             pullRequest: 2
