@@ -4,7 +4,7 @@ BOT: On registration, create an empty repository called introduction-to-github-a
 BOT: Open the first issue using the text from responses/01_intro-gh-apps.md with the title "Introduction to GitHub Apps"
 
 
-### Issue 1
+### ISSUE ONE
 
 01_intro-gh-apps.md - ISSUE
 
@@ -173,7 +173,7 @@ Prompt: Find my next instructions in [this PR](LINKMELINKME).
 ---
 User: Clicks link to first PR,
 
-### Pull Request 1
+### PULL REQUEST ONE
 
 02_wip-app-prompt.md - PR
 
@@ -256,7 +256,7 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 <h3 align="center">Look for my response in a comment on this pull request</h3>
 ---
 
-### Issue 2
+### ISSUE 2
 
 USER: Merges PR.
 BOT: Opens new issue with responses/03_request-info-app-prompt.md
@@ -321,6 +321,7 @@ This has been happening throughout this whole course! I've been waiting for you 
 <h3 align="center">Look for my response in a comment on your new pull request</h3>
 
 ---
+# PULL REQUEST TWO
 
 BOT: Leaves a comment. 03_closed.md
 BOT: Opens new PR with a blank body, along with a minor change to the .github/config.yml file and waits for request bot to leave a comment. Blocks merge.
@@ -362,17 +363,23 @@ USER: Updates PR.
 BOT: Unblocks merge.
 USER: Merges PR.
 
-Posts 03_transition-to-exit.md. Opens final issue with 04_graceful-exit.md
+Posts 04_successful-merge.md.
 
-03_transition-to-exit.md - COMMENT
+04_successful-merge.md - COMMENT
 
-TEXT:
+Great work! Go open a blank issue to see if your .yml changes took effect!
 
-Your last message is waiting [here](issue!). Great job on the course!
+<hr>
+<h3 align="center">Look for my response to your blank issue</h3>
 
-### Issue 3
+---
 
-04_graceful-exit.md - ISSUE
+USER: Opens blank issue.
+BOT: Responds to reminder-app response with 05_graceful-exit.md
+
+### Issue THREE
+
+05_graceful-exit.md - ISSUE comment
 
 TEXT:
 
