@@ -11,7 +11,7 @@ GitHub Apps allow you to change GitHub's surface-level functionality. With webho
 
 ## Installing a GitHub App
 
-[Probot](https://probot.github.io/) is the basis of some of the coolest GitHub Apps out there. Most [Probot apps](https://probot.github.io/docs/) are already hosted, easy to install, and easy to discover. [Probot is a framework](https://probot.github.io/docs/) to help you build GitHub Apps while using Node.js.
+[Probot](https://probot.github.io/) is the basis of some of the coolest GitHub Apps out there. Most [Probot apps](https://probot.github.io/apps/) are already hosted, easy to install, and easy to discover. [Probot is a framework](https://probot.github.io/docs/) to help you build GitHub Apps while using Node.js.
 
 Here are a few examples of things built with Probot:
 - **[Stale](https://probot.github.io/apps/stale/)**: Closes issues and PRs that have been around for a bit too long without activity
