@@ -271,8 +271,8 @@ For the final exercise, we're going to install another app to this repository, a
 
 ### :keyboard: Activity: Installing another app
 
-1. Install the [Reminder app](https://probot.github.io/apps/reminders/) to this repository.
-  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46620432-97e6cf00-cad9-11e8-87eb-7d0c51c12e6d.png). This one will do just fine.  
+1. Install the [Reminder app](https://probot.github.io/apps/request-info/) to this repository.
+  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46640265-d606e180-cb1f-11e8-8cd7-9533eeba22c0.png). This one will do just fine.  
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
@@ -280,17 +280,21 @@ For the final exercise, we're going to install another app to this repository, a
 ---
 
 USER: Installs reminder app.
-BOT: Validates installation and responds with 03_reminder-install-success.md
+BOT: Validates installation and responds with 03_request-info-install-success.md
 
-03_reminder-install-success.md - COMMENT
+03_request-info-install-success.md - COMMENT
 
-TEXT:
+Great job! By following the link, you may have already seen images that teach you how this app works.
 
-Great job! By following the link, you may have already seen the images that teach you how this app works.
+While you follow the next steps, try to think about which webhook events are being activated. Check out the [documentation here](https://developer.github.com/webhooks/). Then, consider what steps the app must know to interact with the GitHub API.
 
-While you follow the next steps, try to think about which webhook events are being activated. [LINK TO WEBHOOKS]. Then, consider what steps the app must know to interact with the GitHub API.
+### :keyboard: Activity: Open a blank issue
 
-Prompt: Leave a reminder command. Example: Remind me to [do something] in a minute (ideally less time, let's experiment).
+1. Open a brand new issue, but don't add any text to the body. Leave it blank except for the title.   
+
+<hr>
+<h3 align="center">Look for my response in a comment on your new issue</h3>
+
 
 ---
 
