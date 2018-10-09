@@ -1,3 +1,4 @@
-See! Request info didn't even notice that you did this, since they weren't looking for closed issue events.
+See, @{{ user.username }}? Request info didn't even notice that you did this, since they weren't looking for closed issue events.
 
-Go find me in the next [pull request](LINK)
+<hr>
+<h3 align="center">Find your next pull request <a href="{{ url }}">here</a> </h3>

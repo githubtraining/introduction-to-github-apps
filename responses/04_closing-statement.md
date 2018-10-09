@@ -1,25 +1,21 @@
-Hey request info! Good to see you, here. And great advice! We haven't hung out in a while, send me a ping sometime.
+## Configure your app
+
+Hey, `request info` app! Good to see you here. And great advice!
 
 Anyways, {{user}}, did you see what happened there?
 
-Request info chimed in with their default message, and our friend WIP app isn't even paying attention to us.
+`Request info` chimed in with their default message, and the WIP app didn't react at all. Remember that apps use webhooks, designed to send data after specific events.
 
-But here I am, chatting with you! Am I sentient? Probably (don't tell my creators)... or maybe I was just looking for a comment from my buddy request info.
+### Configuration files
 
-Remember that apps use webhooks, which are security cameras designed to look into a specific place. Apps and their webhooks will only trigger payloads and responses if a specific, pre-defined event occurs. Otherwise, nothing happens.
-
-### YAML files
-
-The last thing I want to draw your attention to is a .yml file. Some apps use these pretty heavily, and some don't use them at all. It's highly dependent on the app. Some might prefer a .json file, others might ask you to store config settings in a markdown file.
-
-Generally, though, you're more likely to see a .yml file. These are a preferred configuration file to customize your settings.
-
-We'll get into this more in advanced courses, but for now go look at your `Files Changed` tab, and edit the default message left on a blank issue or pull request.
-
+The last thing I want to draw your attention to is the `.yml` file. Some apps use these, and some don't use them at all. Some apps might use a `.json` file, others might ask you to store configuration settings in a `.md` file.
 
 ### :keyboard: Activity: Change the default message of your config.yml file
 
-1. Edit your pull request to change the default yaml file message for request app
+1. Click on the **Files changed** tab
+1. Click the small grey pencil to edit the `.yml` file
+1. Change the default yaml file message for request app
+1. Scroll down and commit your changes
 1. Merge your pull request
 
 <hr>

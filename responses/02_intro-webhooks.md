@@ -1,19 +1,24 @@
-Remember, every time you perform an action on a website you're generating data. For GitHub, many of those standard actions are recognizable as **specific events**, like creating a new issue, or leaving a comment.
+## Triggering GitHub Apps
 
-Each GitHub App specializes in different **events**, to perform routine behaviors. Remember that it's similar to a security monitoring system, looking for actions like movement or noise in a specific part of your home, and then perfoming a pre-defined action that is triggered from the event.
+When you added "WIP" to the title of this pull request, something changed. Do you see that this pull request is now blocked from merging?
+
+When you do things on GitHub, GitHub notices, even if there's no specific reaction. Actions like creating a issue, making a commit, or leaving a comment all create data on GitHub. Even if GitHub doesn't use it, it can be useful to other applications.
+
+When you install an app, you give the app permission to receive some of this data from GitHub. That data allows the apps to react in ways that are useful to you. You can also allow the app to send information back, or change information completely.
 
 Here's what's happening under-the-hood with the WIP App.
 
-1. The App waits for a change to a PR subject line.
-2. If a PR title changes, the app searches for the key-word, **"WIP"**.
-3. If "WIP" is added to a subject, the app will then send a pre-defined request to GitHub's API, to perform a specific behavior.
-4. In this case, the GitHub API is used to change the PR behavior and block a merge.
+1. The app waits for a change to a pull request title line
+2. When a pull request title changes, the app searches for the key-word, **"WIP"**
+3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
 
-Now let's see what happens when you **remove** WIP from the PR title. Revert your change, and we'll learn more in the next comment.
+### Removing  WIP
+
+Now, let's see what happens when you **remove** WIP from the pull request title.
 
 ### :keyboard: Activity: Continued testing
 
-1. Remove [WIP] from the PR title.   
+1. Edit the title of the pull request to remove [WIP]
 
 <hr>
 <h3 align="center">Look for my response in a comment on this PR</h3>

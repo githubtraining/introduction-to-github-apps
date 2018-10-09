@@ -123,7 +123,7 @@ steps:
         body: 04_closing-statement.md
         head: update-default-message
       - type: respond
-        with: next-pull-request.md
+        with: 03_closed.md
         data:
           url: '%actions.second_pr.data.html_url%'
 
@@ -138,7 +138,7 @@ steps:
         right: master
         else:
           - type: respond
-            with: make-changes.md
+            with: 04_make-changes.md
       - type: respond
         with: 04_successful-merge.md
 
