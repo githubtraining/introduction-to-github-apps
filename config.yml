@@ -118,7 +118,7 @@ steps:
     actions:
       - type: createPullRequest
         action_id: second_pr
-        title: 
+        title: Updating the default message
         body: 04_closing-statement.md
       - type: respond
         with: next-pull-request.md
@@ -133,7 +133,7 @@ steps:
         action_id: fileContents
         filename: config.yml
       - type: gate
-        left:
+        left: 'replace-me'
         operator: test
         right: '%actions.fileContents%'
         else: 
