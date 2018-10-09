@@ -10,7 +10,7 @@ Let's change your default template, and watch it take effect on the next exercis
 
 ### :keyboard: Activity: Change the default message of your config.yml file
   1. Click on the **Files changed** tab
-  1. Click the small grey pencil to edit the `.yml` file
+  1. Click the small grey pencil to edit the `config.yml` file
   1. Change the default yaml file message for request app
   1. Scroll down and commit your changes
   1. I'll merge your changes when you've committed
