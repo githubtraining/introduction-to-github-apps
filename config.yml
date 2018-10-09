@@ -125,7 +125,7 @@ steps:
         data:
           url: '%actions.second_pr.data.html_url%'
         
-  - title: Change config.yml default message
+  - title: Change the config.yml default message
     description: Update the default message in your newly created config.yml file
     event: pull_request.synchronize
     link: {{ repoUrl }}/pull/2
@@ -142,7 +142,7 @@ steps:
       - type: respond
         with 04_successful-merge.md
         
-  - title: Open issue
+  - title: Your last issue
     description: Open a new issue to see your new changes
     event: issue.create
     link: {{ repoUrl }}/issues/3
