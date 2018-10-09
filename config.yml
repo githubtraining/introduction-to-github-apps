@@ -52,12 +52,10 @@ steps:
     link: {{ repoUrl }}/pull/1
     actions:
       - type: respond
-        with: 02_wip-success.md
-      - type: respond
         with: 02_wip-install-success.md
  
   - title: Interacting with the "WIP" Probot App
-    description: See how a WIP Probot App works
+    description: See how the WIP Probot App works
     event: pull_request.edited
     link: {{ repoUrl }}/pull/1
     actions:
@@ -97,53 +95,57 @@ steps:
           - type: respond
             with: error-message.md
       - type: createIssue
-        title: Install Reminder Probot App
-        body: 03_reminder-app-prompt.md
+        title: That was so fun, let's do it again!
+        body: 03_request-info-app-prompt.md
         action_id: new_issue
       - type: respond
-        with: next-message.md
+        with: transition-message.md
         data:
           url: '%actions.new_issue.data.html_url%'
      
-  - title: Install Reminder Probot App
+  - title: Install Request Info Probot App
     description: Install another Probot App on your repository
     event: installation.created
     link: {{ repoUrl }}/issues/2
     actions:
       - type: respond
-        with: 03_reminder-install-success.md
+        with: 03_request-info-install-success.md
         
   - title: Trigger the correct webhook event
     description: See what happens when arbitrary webhooks are triggered
-    event: issues.closed
+    event: issues.closed    
     link: {{ repoUrl }}/issues/2
     actions:
-      - type: octokit
-        method: issues.edit
-        owner: '%payload.repository.owner.login%'
-        repo: '%payload.repository.name%'
-        number: '%payload.issue.number%'
-        state: open
+      - type: createPullRequest
+        action_id: second_pr
+        title: 
+        body: 04_closing-statement.md
       - type: respond
-        with: 03_closing-statement.md
-  
-  - title: Prompt Reminder App Webhook
-    description: Now that the reminder App is installed, it's time to prompt the correct webhook event
-    event: issue_comment.created
-    link: {{ repoUrl }}/issues/2
-    actions:
-      - type: gate
-        left: '%payload.issue_comment%'
-        operator: test
-        right: \n\n\`/remind me [what] [when]\` # grabbed from https://github.com/probot/reminders/blob/master/lib/reminders.js#L29
-        else:
-          respond:
-          with:error-message.md
-      - type: respond
-        with: 03_trasition-to-exit.md
-      - type: createIssue
-        title: Well done!
-        body: 04_graceful-exit.md
-        action_id: final_issue
+        with: next-pull-request.md
         data:
-          url: '%actions.final_issue.data.html_url%'
+          url: '%actions.second_pr.data.html_url%'
+        
+  - title: Change config.yml default message
+    description: Update the default message in your newly created config.yml file
+    event: pull_request.synchronize
+    link: {{ repoUrl }}/pull/2
+      - type: getFileContent
+        action_id: fileContents
+        filename: config.yml
+      - type: gate
+        left:
+        operator: test
+        right: '%actions.fileContents%'
+        else: 
+          - type: respond
+            with: make-changes.md
+      - type: respond
+        with 04_successful-merge.md
+        
+  - title: Open issue
+    description: Open a new issue to see your new changes
+    event: issue.create
+    link: {{ repoUrl }}/issues/3
+    action:
+      - type: respond
+        with: 05_graceful-exit.md
