@@ -138,7 +138,7 @@ steps:
         right: master
         else:
           - type: respond
-            with: make-changes.md
+            with: 04_make-changes.md
       - type: respond
         with: 04_successful-merge.md
 
