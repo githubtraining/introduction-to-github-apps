@@ -1,4 +1,6 @@
-Probot is a framework to help you build a GitHub App while using Node.js. Comparatively, it's pretty simple! In the background, it handles all the drudgery–like receiving and validating webhooks, and doing authentication handshakes.
+Nicely done! See, I bet installing this App wasn't as difficult as you may have thought :smile:
+
+The cool thing about Probot is that it's a framework to help you build GitHub Apps while using Node.js. Comparatively, it's pretty simple! In the background, it handles all the drudgery–like receiving and validating webhooks, and doing authentication handshakes.
 
 Now that your app has been installed, let's make sure it works.
 
