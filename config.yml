@@ -68,7 +68,6 @@ steps:
     - type: updateBranchProtection
     - type: createPullRequest
       title: Practice makes perfect
-      body: 02_request-info-app-prompt.md
       head: request-info
       action_id: new_pr
     - type: respond
@@ -76,15 +75,6 @@ steps:
       with: 02_next-pull-request.md
       data:
         url: '%actions.new_pr.data.html_url%'
-
-
-  - title: Install another GitHub App
-    description: Install another GitHub App called "Request Info"
-    event: installation.created
-    link: '{{ repoUrl }}/pull/2'
-    actions:
-      - type: respond
-        with: 02_request-info-install-success.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
