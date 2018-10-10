@@ -2,7 +2,9 @@
 
 Before we start using real GitHub applications, let's get some foundations out of the way.
 
-Note: this course assumes that you've previously completed the ["Introduction to GitHub"](https://lab.github.com/githubtraining/introduction-to-github) Learning Lab course.
+### New to GitHub? 
+
+For this course, you'll need to know how to create a branch on GitHub, commit changes using Git, and open a pull request on GitHub. If you need a refresher on the GitHub flow, check out the [the Introduction to GitHub course]({{ host}}/courses/introduction-to-github).
 
 ## Application vs GitHub Application
 There are many types of applications, like the apps you might have on your phone. In this course, we'll focus on **GitHub Applications**, apps designed to work on GitHub.
