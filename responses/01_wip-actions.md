@@ -12,7 +12,7 @@ The app you've just installed is concerned with one action: changing the title o
 
 ### :keyboard: Activity: Testing an app
 
-1. Add [WIP] to the title of this PR.
+1. Add `WIP` to the title of this PR.
 
 <hr>
 <h3 align="center">After changing the title, look for my response in a comment on this PR</h3>
