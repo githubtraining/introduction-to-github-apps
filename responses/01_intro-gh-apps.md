@@ -24,4 +24,4 @@ Try it out! After you install the WIP app, try and assign myself or the WIP app 
 2. Assign yourself to this pull request
 
 <hr>
-<h3 align="center">After installing **and then** assigning yourself to this pull request, look for my response below</h3>
+<h3 align="center">After installing and assigning yourself to this pull request, look for my response below</h3>
