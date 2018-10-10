@@ -63,16 +63,17 @@ steps:
       else:
       - type: respond
         with: 02_accidental-close.md
-    - type: respond
-      issue: 1
-      with: 02_next-pull-request.md
-      data:
-        url: '%actions.new_pr.data.html_url%'
     - type: createPullRequest
       title: Practice makes perfect
       body: 02_request-info-app-prompt.md
       head: request-info
       action_id: new_pr
+    - type: respond
+      issue: 1
+      with: 02_next-pull-request.md
+      data:
+        url: '%actions.new_pr.data.html_url%'
+
 
   - title: Install another GitHub App
     description: Install another GitHub App called "Request Info"
