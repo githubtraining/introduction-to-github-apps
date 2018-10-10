@@ -31,7 +31,7 @@ steps:
       - type: gate
         left: '%payload.pull_request.title%'
         operator: test
-        right: /\b(wip|do not merge|work in progress)\b/i
+        right: /^WIP/
         else:
           - type: respond
             with: 02_WIP-error-message.md
@@ -46,7 +46,7 @@ steps:
       - type: gate
         left: '%payload.pull_request.title%'
         operator: test
-        right: /\b(wip|do not merge|work in progress)\b/i
+        right: /^WIP/
         else:
           - type: mergePullRequest
             pullRequest: 1
