@@ -59,6 +59,7 @@ steps:
     description: Merge the first pull request of the course
     event: pull_request.closed
     link: '{{ repoUrl }}/pull/3'
+    actions:
     - type: gate
       left: '%payload.pull_request.merged%'
       else:
