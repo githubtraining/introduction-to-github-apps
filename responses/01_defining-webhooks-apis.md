@@ -1,5 +1,5 @@
 ## WIP response
-When you added "WIP" to the title of this pull request, something changed. Do you see that this pull request is now blocked from merging?
+When you added "WIP" to the title of this pull request, something changed. Do you see that the pull request's status is "pending" with and yellow dot? This is to block merging while the title includes "WIP".
 
 Here's what's happening under-the-hood with the WIP app.
 
