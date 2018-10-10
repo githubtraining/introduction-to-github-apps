@@ -70,6 +70,7 @@ steps:
       - type: respond
         with: 02_accidental-close.md
     - type: respond
+      issue: 3
       with: 02_next-pull-request.md
       data:
         url: '%actions.new_pr.data.html_url%'
