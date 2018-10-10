@@ -50,8 +50,6 @@ steps:
         else:
         - type: respond
           with: 01_merge-success.md
-          data:
-            url: '%actions.new_pr.data.html_url%'
       - type: respond
         with: 02_WIP-error-message2.md
 
@@ -74,6 +72,8 @@ steps:
     - type: respond
       issue: 3
       with: 02_next-pull-request.md
+      data:
+        url: '%actions.new_pr.data.html_url%'
     - type: createPullRequest
       title: Practice makes perfect
       body: 02_request-info-app-prompt.md
