@@ -8,7 +8,7 @@ GitHub Apps are very different from OAuth apps, which have a different installat
 
 ## The WIP app
 
-The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.  
+The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.
 
 ### :keyboard: Activity: Testing an app
 
