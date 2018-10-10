@@ -45,7 +45,7 @@ steps:
     actions:
       - type: gate
         left: '/\WIP/g'
-        operator: !test
+        operator: '!test'
         right: '%payload.pull_request.title%'
         - type: respond
           with: 02_WIP-error-message2.md
