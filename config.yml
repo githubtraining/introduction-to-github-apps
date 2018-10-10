@@ -39,49 +39,44 @@ steps:
       - type: respond
         with: 01_defining-webhooks-apis.md
 
-  - title: Getting hooked on webhooks
-    description: Understand what webhooks are and how they work
+  - title: Remove WIP from the title
+    description: Interact with the WIP app by removing WIP from the title
     event: pull_request.edited
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
-        left: '%payload.pull_request.title%'
-        operator: search
-        right: WIP
-        else:
-        - type: respond
-          with: 01_merge-success.md
-        - type: removeBranchProtection
+        left: '/\WIP/g'
+        operator: '!test'
+        right: '%payload.pull_request.title%'
+        else: 
+          - type: respond
+            with: 02_WIP-error-message2.md
+      - type: removeBranchProtection
       - type: respond
-        with: 02_WIP-error-message2.md
-
+        with: 01_merge-success.md
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/3'
+    link: '{{ repoUrl }}/pull/1'
     actions:
     - type: gate
       left: '%payload.pull_request.merged%'
       else:
-      - type: octokit
-        method: issues.edit
-        state: open
-        owner: '%payload.repository.owner.login%'
-        repo: '%payload.repository.name%'
-        number: '%payload.repository.pull_request.number%'
       - type: respond
         with: 02_accidental-close.md
-    - type: respond
-      with: 02_next-pull-request.md
-      data:
-        url: '%actions.new_pr.data.html_url%'
     - type: updateBranchProtection
     - type: createPullRequest
       title: Practice makes perfect
       body: 02_request-info-app-prompt.md
       head: request-info
       action_id: new_pr
+    - type: respond
+      issue: 1
+      with: 02_next-pull-request.md
+      data:
+        url: '%actions.new_pr.data.html_url%'
+
 
   - title: Install another GitHub App
     description: Install another GitHub App called "Request Info"
