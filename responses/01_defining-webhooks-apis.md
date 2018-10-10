@@ -35,9 +35,11 @@ Nope! Each application will ask you for specific permission to fulfill its purpo
 This has been happening throughout this course! I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.
 </details>
 
-### :keyboard: Activity: Continued testing
+### :keyboard: Activity: Remove WIP from pull request title
 
-1. Remove `WIP` from the title of this pull request
+1. To the right of the pull request title, click the **Edit** button
+1. Remove `WIP` from the title
+1. Click **Save**
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
