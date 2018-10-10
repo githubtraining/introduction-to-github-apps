@@ -11,7 +11,7 @@ before:
     head: intro-gh-apps
     body: 01_intro-gh-apps.md
 steps:
-  - title: Introduction to GitHub Apps
+  - title: Install your first GitHub App: WIP, then assign yourself to the PR
     description: Learn what a GitHub App is and how to install it
     event: "installation.created"
     link: '{{ repoUrl }}/pull/1'
@@ -19,7 +19,7 @@ steps:
       - type: respond
         with: 01_wip-actions.md
 
-  - title: Interacting with the GitHub App
+  - title: Trigger the WIP App
     description: Once installed, learn how to interact with the app
     event: "pull_request.edited"
     link: '{{ repoUrl }}/pull/1'
@@ -34,7 +34,7 @@ steps:
       - type: respond
         with: 01_defining-webhooks-apis.md
 
-  - title: Getting hooked with webhooks
+  - title: Getting hooked on webhooks 
     description: Understand what webhooks are and how they work
     event: pull_request.edited
     link: '{{ repoUrl }}/pull/1'
@@ -45,7 +45,7 @@ steps:
         right: /\b(wip|do not merge|work in progress)\b/i
         else:
           - type: mergePullRequest
-            pullRequest: 1 
+            pullRequest: 1
           - type: createPullRequest
             title: Practice makes perfect
             body: 02_request-info-app-prompt.md
@@ -54,11 +54,11 @@ steps:
           - type: respond
             with: 01_merge-success.md
             data:
-              url: '%actions.new_pr.data.html_url%'    
+              url: '%actions.new_pr.data.html_url%'
       - type: respond
         with: 02_WIP-error-message2.md
 
-  - title: Install Request Info Probot App
+  - title: Install the GitHub App: Request Info
     description: There are so many GitHub Apps, let's install another one
     event: installation.created
     link: '{{ repoUrl }}/pull/2'
@@ -66,7 +66,7 @@ steps:
       - type: respond
         with: 02_request-info-install-success.md
 
-  - title: Customize your app's response
+  - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/2'
