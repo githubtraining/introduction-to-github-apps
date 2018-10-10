@@ -11,11 +11,15 @@ before:
     head: intro-gh-apps
     body: 01_intro-gh-apps.md
 steps:
-  - title: Install your first GitHub App, then assign yourself to the PR
+  - title: Install your first GitHub App: WIP, then assign yourself to the PR
     description: Learn what a GitHub App is and how to install it
-    event: "installation.created"
+    event: "issues.assigned"
     link: '{{ repoUrl }}/pull/1'
     actions:
+      - type: gate
+        left: "%payload.assignee.login%"
+        operator: "==="
+        right: "%user.username%"
       - type: respond
         with: 01_wip-actions.md
 
