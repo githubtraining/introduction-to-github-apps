@@ -6,6 +6,7 @@ template:
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
   repo: introduction-to-github-apps-template
 before:
+  - type: updateBranchProtection
   - type: createPullRequest
     title: Introduction to GitHub Apps
     head: intro-gh-apps
@@ -50,9 +51,9 @@ steps:
         else: 
           - type: respond
             with: 02_WIP-error-message2.md
+      - type: removeBranchProtection
       - type: respond
         with: 01_merge-success.md
-
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
@@ -64,6 +65,7 @@ steps:
       else:
       - type: respond
         with: 02_accidental-close.md
+    - type: updateBranchProtection
     - type: createPullRequest
       title: Practice makes perfect
       body: 02_request-info-app-prompt.md
