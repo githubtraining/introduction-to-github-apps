@@ -1,11 +1,10 @@
-Have you ever wanted to add your own feature to GitHub, or automate repetitive tasks?
+Meet GitHub Apps—the best way to build on GitHub. Automate repetitive tasks to save you time (and headspace) and reduce friction in your project. Learn how to build custom workflows with GitHub’s REST and GraphQL APIs, installed directly on your organizations and user accounts.
 
-Say hello to GitHub Apps! GitHub Apps allow you to build custom workflows on top of GitHub's API. They can be installed directly on organizations and user accounts, and then granted access to specific repositories. This course will show you how automation can improve your workflow and reduce friction within your project.
+In this course, you’ll learn how to:
 
-After completing this course, you’ll be able to:
+- Get started with GitHub's REST and GraphQL APIs
+- Put GitHub webhooks to use
+- Work with GitHub Apps, including what they are, their place in the development ecosystem, and how they're structured
+- Install Probot apps onto your repository
 
-- Install GitHub Apps
-- Find other GitHub and OAuth Apps to improve your workflow
-- Configure GitHub Apps to fit your needs
-
-This course has a dedicated message board on the [GitHub Community]({{ communityBoard }}) website. If you want to discuss this course with GitHub Trainers or other participants create a post over there. The message board can also be used to troubleshoot any issue you encounter while taking this course.
+This course has a dedicated message board on the [GitHub Community Forum]({{ communityBoard }}). Create a post to start a conversation, discuss this course with GitHub Trainers and participants, or troubleshoot any issues you encounter.  
