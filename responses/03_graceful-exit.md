@@ -26,12 +26,20 @@ Congratulations @{{ user.username }}, you've completed the **Introduction to Git
 - Installed two GitHub Probot Apps on our repository
 
 
-### What's next?
+### Probot & GitHub Apps
+
+[Probot](https://probot.github.io/) is the basis of some of the coolest GitHub Apps out there. Most Probot apps are already hosted, easy to install, and easy to discover. Probot is a framework to help you build GitHub Apps while using Node.js.
 
 Want to learn more about Probot and GitHub Apps? Below are a few resources that will help you along your journey:
 - [Probot Apps](https://probot.github.io/apps/)
-- [Probot Documentation](https://probot.github.io/docs/)
+- [Probot documentation](https://probot.github.io/docs/)
+- [GitHub API documentation](https://developer.github.com/webhooks)
 - [GitHub Marketplace](https://github.com/marketplace)
+
+Here are some great examples of other Probot Apps:
+- **[Stale](https://probot.github.io/apps/stale/)**: Closes issues and PRs that have been around for a bit too long without activity
+- **[Delete merged branch](https://probot.github.io/apps/delete-merged-branch/)**: After a merge, deletes the branch
+- **[First timers](https://probot.github.io/apps/first-timers/)**: Creates an issue to help onboard new open source contributors to your community
 
 ### Keep Learning
 
