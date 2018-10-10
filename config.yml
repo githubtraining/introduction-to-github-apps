@@ -44,9 +44,9 @@ steps:
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
-        left: '%payload.pull_request.title%'
+        left: '/\WIP/g'
         operator: !test
-        right: '/WIP/g'
+        right: '%payload.pull_request.title%'
         - type: respond
           with: 02_WIP-error-message2.md
       - type: respond
