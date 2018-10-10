@@ -26,9 +26,9 @@ Try it out! After you install the WIP app, try and assign myself or the WIP app 
 
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
-1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository.
-</br>:warning: For this activity, install the GitHub app **only on this repository**.
-2. Assign yourself to this pull request.
+1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository
+</br>:warning: For this activity, install the GitHub app **only on this repository**
+2. Assign yourself to this pull request
 
 <hr>
 <h3 align="center">After installing **and then** assigning yourself to this pull request, look for my response below</h3>
