@@ -15,14 +15,13 @@ GitHub Apps allow you to change GitHub's surface-level functionality. With webho
 
 To learn more about GitHub Apps, let's install the **[WIP Probot app](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repository only. Don't apply it to everything you have access to.
 
-GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
+It's also important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work. 
 
-Try it out! After you install the WIP app, try and assign myself or the WIP app to this pull request. If you can't, assign yourself so I know you're ready to get started.
+Let's get started by installing the app and then assigning yourself to the pull request so I know you're ready to continue.
 
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
 1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository
-</br>:warning: For this activity, install the GitHub app **only on this repository**
 2. Assign yourself to this pull request
 
 <hr>
