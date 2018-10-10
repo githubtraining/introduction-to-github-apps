@@ -45,7 +45,7 @@ steps:
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
-        operator: !===
+        operator: !test
         right: '/WIP/g'
         - type: respond
           with: 02_WIP-error-message2.md
