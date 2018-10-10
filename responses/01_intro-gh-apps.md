@@ -21,7 +21,7 @@ Let's get started by installing the app and then assigning yourself to the pull 
 
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
-1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository
+1. Install the <a href="https://probot.github.io/apps/wip/" target="_blank">WIP app</a> to this repository
 2. Assign yourself to this pull request
 
 <hr>
