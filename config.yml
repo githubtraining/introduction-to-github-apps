@@ -30,8 +30,8 @@ steps:
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
-        operator: test
-        right: /^WIP/
+        operator: search
+        right: WIP
         else:
           - type: respond
             with: 02_WIP-error-message.md
@@ -45,8 +45,8 @@ steps:
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
-        operator: test
-        right: /^WIP/
+        operator: search
+        right: WIP
         else:
           - type: mergePullRequest
             pullRequest: 1
