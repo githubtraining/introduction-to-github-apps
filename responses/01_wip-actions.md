@@ -10,9 +10,11 @@ GitHub Apps are very different from OAuth Apps, which have a different installat
 
 The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.
 
-### :keyboard: Activity: Testing an app
+### :keyboard: Activity: Test the app by editing the pull request title
 
-1. Add `WIP` to the title of this pull request
+1. To the right of the pull request title, click the **Edit** button
+1. Add `WIP` to the beginning of the title
+1. Click **Save**
 
 <hr>
 <h3 align="center">After changing the title, look for my response in this pull request</h3>

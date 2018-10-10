@@ -2,7 +2,9 @@
 
 Before we start using real GitHub applications, let's get some foundations out of the way.
 
-Note: this course assumes that you've previously completed the ["Introduction to GitHub"](https://lab.github.com/githubtraining/introduction-to-github) Learning Lab course.
+### New to GitHub? 
+
+For this course, you'll need to know how to create a branch on GitHub, commit changes using Git, and open a pull request on GitHub. If you need a refresher on the GitHub flow, check out the [the Introduction to GitHub course]({{ host}}/courses/introduction-to-github).
 
 ## Application vs GitHub Application
 There are many types of applications, like the apps you might have on your phone. In this course, we'll focus on **GitHub Applications**, apps designed to work on GitHub.
@@ -11,16 +13,15 @@ GitHub Apps allow you to change GitHub's surface-level functionality. With webho
 
 ## Installing a GitHub App
 
-To learn more about GitHub Apps, let's install the **[WIP Probot app](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repo only. Don't apply it to everything you have access to.
+To learn more about GitHub Apps, let's install the **[WIP Probot app](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repository only. Don't apply it to everything you have access to.
 
-GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
+It's also important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work. 
 
-Try it out! After you install the WIP app, try and assign myself or the WIP app to this pull request. If you can't, assign yourself so I know you're ready to get started.
+Let's get started by installing the app and then assigning yourself to the pull request so I know you're ready to continue.
 
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
-1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository
-</br>:warning: For this activity, install the GitHub app **only on this repository**
+1. Install the <a href="https://probot.github.io/apps/wip/" target="_blank">WIP app</a> to this repository
 2. Assign yourself to this pull request
 
 <hr>
