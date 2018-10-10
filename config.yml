@@ -38,20 +38,20 @@ steps:
       - type: respond
         with: 01_defining-webhooks-apis.md
 
-  - title: Getting hooked on webhooks
-    description: Understand what webhooks are and how they work
+  - title: Remove WIP from the title
+    description: Interact with the WIP app by removing WIP from the title
     event: pull_request.edited
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
-        operator: search
-        right: WIP
-        else:
+        operator: !===
+        right: '/WIP/g'
         - type: respond
-          with: 01_merge-success.md
+          with: 02_WIP-error-message2.md
       - type: respond
-        with: 02_WIP-error-message2.md
+        with: 01_merge-success.md
+
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
