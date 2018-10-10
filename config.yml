@@ -48,8 +48,8 @@ steps:
         operator: '!test'
         right: '%payload.pull_request.title%'
         else: 
-        - type: respond
-          with: 02_WIP-error-message2.md
+          - type: respond
+            with: 02_WIP-error-message2.md
       - type: respond
         with: 01_merge-success.md
 
