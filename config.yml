@@ -48,19 +48,36 @@ steps:
         operator: search
         right: WIP
         else:
-          - type: mergePullRequest
-            pullRequest: 1
-          - type: createPullRequest
-            title: Practice makes perfect
-            body: 02_request-info-app-prompt.md
-            head: request-info
-            action_id: new_pr
-          - type: respond
-            with: 01_merge-success.md
-            data:
-              url: '%actions.new_pr.data.html_url%'
+        - type: respond
+          with: 01_merge-success.md
       - type: respond
         with: 02_WIP-error-message2.md
+
+  - title: Merge the first pull request
+    description: Merge the first pull request of the course
+    event: pull_request.closed
+    link: '{{ repoUrl }}/pull/3'
+    actions:
+    - type: gate
+      left: '%payload.pull_request.merged%'
+      else:
+      - type: octokit
+        method: issues.edit
+        state: open
+        owner: '%payload.repository.owner.login%'
+        repo: '%payload.repository.name%'
+        number: '%payload.repository.pull_request.number%'
+      - type: respond
+        with: 02_accidental-close.md
+    - type: respond
+      with: 02_next-pull-request.md
+      data:
+        url: '%actions.new_pr.data.html_url%'
+    - type: createPullRequest
+      title: Practice makes perfect
+      body: 02_request-info-app-prompt.md
+      head: request-info
+      action_id: new_pr
 
   - title: Install another GitHub App
     description: Install another GitHub App called "Request Info"
