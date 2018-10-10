@@ -33,10 +33,10 @@ steps:
         operator: test
         right: /\b(wip|do not merge|work in progress)\b/i
         else:
-          type: respond
-          with: 01_defining-webhooks-apis.md
+          - type: respond
+            with: 02_WIP-error-message.md
       - type: respond
-        with: 02_WIP-error-message.md
+        with: 01_defining-webhooks-apis.md
 
   - title: Getting hooked on webhooks 
     description: Understand what webhooks are and how they work
