@@ -59,17 +59,17 @@ steps:
     description: Merge the first pull request of the course
     event: pull_request.closed
     link: '{{ repoUrl }}/pull/3'
-    - type: gate
-      left: '%payload.pull_request.merged%'
-      else:
-      - type: octokit
-        method: issues.edit
-        state: open
-        owner: '%payload.repository.owner.login%'
-        repo: '%payload.repository.name%'
-        number: '%payload.repository.pull_request.number%'
-      - type: respond
-        with: 02_accidental-close.md
+      - type: gate
+        left: '%payload.pull_request.merged%'
+        else:
+        - type: octokit
+          method: issues.edit
+          state: open
+          owner: '%payload.repository.owner.login%'
+          repo: '%payload.repository.name%'
+          number: '%payload.repository.pull_request.number%'
+        - type: respond
+          with: 02_accidental-close.md
     - type: respond
       issue: 3
       with: 02_next-pull-request.md
