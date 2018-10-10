@@ -7,6 +7,7 @@ As you install, try to think about which webhook events will activate when we te
 ### :keyboard: Activity: Install the Request Info app
 
 1. Install the [Request Info app](https://probot.github.io/apps/request-info/)
+</br>:warning: For this activity, install the GitHub app **only on this repository**
 
 <hr>
 <h3 align="center">Look for my response in a comment on this issue</h3>
