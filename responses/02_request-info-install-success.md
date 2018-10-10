@@ -1,5 +1,5 @@
-## Request info app
-When a user opens an empty issue or pull request, the request info app will do exactly that -- request some more info. It won't work until we finish the next task.
+## Request Info app
+When a user opens an empty issue or pull request, the Request Info app will do exactly that -- request some more information. It won't work until we finish the next task.
 
 ## Configuration files
 Per the instructions, this app requires a `.github/config.yml` file for it to respond with a default message. We've already included that in this pull request for you. Some apps use these, and some don't use them at all. Some apps might use a `.json` file, while others might ask you to store configuration settings in a `.md` file.

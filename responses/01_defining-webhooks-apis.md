@@ -1,7 +1,7 @@
 ## WIP response
 When you added "WIP" to the title of this pull request, something changed. Do you see that this pull request is now blocked from merging?
 
-Here's what's happening under-the-hood with the WIP App.
+Here's what's happening under-the-hood with the WIP app.
 
 1. The app listens specifically for a change to a pull request title
 2. When a pull request title changes, the app searches for the key-word, **"WIP"**
@@ -11,7 +11,7 @@ The way that all of this works relies heavily on webhooks, payloads, and the Git
 
 <details><summary>Optional extension: GitHub Apps as a metaphor</summary>
 
-An App is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.
+An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.
 
 **When you install a home security system, you need to worry about a few components:**
 - Electricity (it needs to have the power to run continuously. You don't want failure when you aren't watching.)

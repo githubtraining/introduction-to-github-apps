@@ -11,7 +11,7 @@ GitHub Apps allow you to change GitHub's surface-level functionality. With webho
 
 ## Installing a GitHub App
 
-To learn more about GitHub Apps, let's install the **[WIP Probot App](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repo only. Don't apply it to everything you have access to.
+To learn more about GitHub Apps, let's install the **[WIP Probot app](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repo only. Don't apply it to everything you have access to.
 
 GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
 

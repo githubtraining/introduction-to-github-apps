@@ -23,7 +23,7 @@ steps:
       - type: respond
         with: 01_wip-actions.md
 
-  - title: Trigger the WIP App
+  - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
     event: "pull_request.edited"
     link: '{{ repoUrl }}/pull/1'
@@ -63,7 +63,7 @@ steps:
         with: 02_WIP-error-message2.md
 
   - title: Install another GitHub App
-    description: There are so many GitHub Apps, let's install another one
+    description: Install another GitHub App called "Request Info"
     event: installation.created
     link: '{{ repoUrl }}/pull/2'
     actions:

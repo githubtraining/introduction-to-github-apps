@@ -4,9 +4,9 @@ The next GitHub App we're going to install is called **Request Info**. You can f
 
 As you install, try to think about which webhook events will activate when we test this out.
 
-### :keyboard: Activity: Install the request info app
+### :keyboard: Activity: Install the Request Info app
 
-1. Install the [request info app](https://probot.github.io/apps/request-info/)
+1. Install the [Request Info app](https://probot.github.io/apps/request-info/)
 
 <hr>
 <h3 align="center">Look for my response in a comment on this issue</h3>

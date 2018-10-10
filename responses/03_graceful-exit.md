@@ -15,7 +15,7 @@ Congratulations @{{ user.username }}, you've completed the **Introduction to Git
 
 ### Probot & GitHub Apps
 
-[Probot](https://probot.github.io/) is the basis of some of the coolest GitHub Apps out there. Most Probot apps are already hosted, easy to install, and easy to discover. Probot is a framework to help you build GitHub Apps while using Node.js.
+[Probot](https://probot.github.io/) is the basis of some of the coolest GitHub Apps out there. Most Probot Apps are already hosted, easy to install, and easy to discover. Probot is a framework to help you build GitHub Apps while using Node.js.
 
 Want to learn more about Probot and GitHub Apps? Below are a few resources that will help you along your journey:
 - [Probot Apps](https://probot.github.io/apps/)
