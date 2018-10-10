@@ -13,7 +13,7 @@ before:
 steps:
   - title: Install your first GitHub App then assign yourself to the PR
     description: Learn what a GitHub App is and how to install it
-    event: "issues.assigned"
+    event: "pull_request.assigned"
     link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
