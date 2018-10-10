@@ -68,6 +68,7 @@ steps:
     - type: updateBranchProtection
     - type: createPullRequest
       title: Practice makes perfect
+      body: 03_blank-PR.md
       head: request-info
       action_id: new_pr
     - type: respond
