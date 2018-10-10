@@ -24,7 +24,7 @@ Want to learn more about Probot and GitHub Apps? Below are a few resources that 
 - [GitHub Marketplace](https://github.com/marketplace)
 
 Here are some great examples of other Probot Apps:
-- **[Stale](https://probot.github.io/apps/stale/)**: Closes issues and PRs that have been around for a bit too long without activity
+- **[Stale](https://probot.github.io/apps/stale/)**: Closes issues and pull requests that have been around for a bit too long without activity
 - **[Delete merged branch](https://probot.github.io/apps/delete-merged-branch/)**: After a merge, deletes the branch
 - **[First timers](https://probot.github.io/apps/first-timers/)**: Creates an issue to help onboard new open source contributors to your community
 

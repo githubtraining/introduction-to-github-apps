@@ -16,4 +16,4 @@ Let's change your default template, and watch it take effect on the next exercis
   1. I'll merge your changes when you've committed
 
 <hr>
-<h3 align="center">After you update this PR, i'll go ahead and merge this in for you. Look for my response below</h3>
+<h3 align="center">After you update this pull request, I'll merge this in for you. Look for my response below.</h3>

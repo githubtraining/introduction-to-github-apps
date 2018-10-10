@@ -37,7 +37,7 @@ This has been happening throughout this course! I've been waiting for you to per
 
 ### :keyboard: Activity: Continued testing
 
-1. Remove `WIP` from the title of this PR
+1. Remove `WIP` from the title of this pull request
 
 <hr>
-<h3 align="center">Look for my response in a comment on this PR</h3>
+<h3 align="center">Look for my response in a comment on this pull request</h3>

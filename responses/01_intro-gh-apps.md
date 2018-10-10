@@ -15,7 +15,7 @@ To learn more about GitHub Apps, let's install the **[WIP Probot app](https://pr
 
 GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
 
-Try it out! After you install the WIP app, try and assign myself or the WIP app to this PR. If you can't, assign yourself so I know you're ready to get started.
+Try it out! After you install the WIP app, try and assign myself or the WIP app to this pull request. If you can't, assign yourself so I know you're ready to get started.
 
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
