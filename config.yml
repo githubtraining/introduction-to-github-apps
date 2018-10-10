@@ -1,6 +1,6 @@
-title: Introduction to GitHub Apps
+title: Getting started with GitHub Apps
 tagline: Get started with GitHub Apps in a flash
-description: See how automation can improve your workflow and reduce friction with GitHub Apps
+description: Add your own GitHub feature, automate workflows, and more with GitHub Apps. 
 template:
   name: introduction-to-github-apps
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
