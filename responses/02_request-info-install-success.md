@@ -1,8 +1,8 @@
-## Request info app
-When a user opens an empty issue or pull request, the request info app will do exactly that -- request some more info. It won't work until we finish the next task.
+## Request Info app
+When a user opens an empty issue or pull request, the Request Info app will do exactly that -- request some more information. It won't work until we finish the next task.
 
 ## Configuration files
-Per the instructions, this app requires a .github/config.yml file for it to respond with a default message. We've already included that in this pull request for you. Some apps use these, and some don't use them at all. Some apps might use a `.json` file, while others might ask you to store configuration settings in a `.md` file.
+Per the instructions, this app requires a `.github/config.yml` file for it to respond with a default message. We've already included that in this pull request for you. Some apps use these, and some don't use them at all. Some apps might use a `.json` file, while others might ask you to store configuration settings in a `.md` file.
 
 This allows you to take default templates and extend them to your own projects.
 
@@ -16,4 +16,4 @@ Let's change your default template, and watch it take effect on the next exercis
   1. I'll merge your changes when you've committed
 
 <hr>
-<h3 align="center">After you update this PR, i'll go ahead and merge this in for you. Look for my response below</h3>
+<h3 align="center">After you update this pull request, I'll merge this in for you. Look for my response below.</h3>
