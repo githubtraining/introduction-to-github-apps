@@ -3,7 +3,7 @@ When you added "WIP" to the title of this pull request, something changed. Do yo
 
 Here's what's happening under-the-hood with the WIP App.
 
-1. The app waits for a change to a pull request title line
+1. The app listens specifically for a change to a pull request title
 2. When a pull request title changes, the app searches for the key-word, **"WIP"**
 3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
 
