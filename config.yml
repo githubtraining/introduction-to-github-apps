@@ -56,7 +56,7 @@ steps:
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/3'
+    link: '{{ repoUrl }}/pull/1'
     actions:
     - type: gate
       left: '%payload.pull_request.merged%'
@@ -64,7 +64,7 @@ steps:
       - type: respond
         with: 02_accidental-close.md
     - type: respond
-      issue: 3
+      issue: 1
       with: 02_next-pull-request.md
       data:
         url: '%actions.new_pr.data.html_url%'
