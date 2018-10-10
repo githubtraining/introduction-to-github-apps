@@ -18,7 +18,7 @@ Here are a few examples of things built with Probot:
 - **[Delete merged branch](https://probot.github.io/apps/delete-merged-branch/)**: After a merge, deletes the branch
 - **[First timers](https://probot.github.io/apps/first-timers/)**: Creates an issue to help onboard new open source contributors to your community
 
-To learn more about GitHub Apps, let's install the **[WIP Probot App](https://probot.github.io/apps/wip/)** to this repository. Make sure to install this app on this repo only. Don't apply it to everything you have access to.
+To learn more about GitHub Apps, let's install the **[WIP Probot App](https://probot.github.io/apps/wip/)** to this repository. "WIP" is a common abbreviation to mean **work in progress**. Make sure to install this app on this repo only. Don't apply it to everything you have access to.
 
 GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
 

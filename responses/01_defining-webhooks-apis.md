@@ -27,7 +27,7 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 - Once triggered, the GitHub API sends a payload of data to a predefined location that's [related to the event](https://probot.github.io/docs/webhooks/).
 - The GitHub API can send information or make changes to the platform, but only when asked. The GitHub API _and_ GitHub's webhooks are both key components of GitHub Apps.
 
-When you **remove** WIP from the pull request title, I'll automatically merge the unblocked PR and give you a new set of instructions.
+When you **remove** WIP from the pull request title, I'll automatically merge the unblocked pull request and give you a new set of instructions.
 
 <details><summary>Are apps listening to everything I do? Are they stealing my data?</summary>
 Nope! Each application will ask you for specific permission to fulfill its purpose. In this case, the app might scan for your issue or pull request context, but only to determine if the content is empty.
