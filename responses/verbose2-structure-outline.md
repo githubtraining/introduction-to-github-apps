@@ -12,7 +12,7 @@ LL Open a PR:
   - Task: Install WIP Bot
   - LL validates installation
 - Comment 1: Describe WIP bot and ask user to trigger its event
-  - Task: Edit PR title (Add WIP)
+  - Task: Edit pull request title (Add WIP)
   - LL validates title change
 - Comment 2: Define a webhook and what an API is
   - Task: Edit the PR title (remove WIP)
@@ -20,7 +20,7 @@ LL Open a PR:
   - LL merges PR and points to next PR
 
 LL open a PR with .github/config.yml
-  - OP: Install Request_Info, describe how an app consumes and acts on information from a webhook  
+  - OP: Install Request_Info, describe how an app consumes and acts on information from a webhook
   - Task: Edit the config.yml file
   - LL validates file change
   - LL merges in PR
@@ -49,7 +49,7 @@ Introduce apps and place in development ecosystem (heavily reduced)...
 ### :keyboard: Activity: Install the WIP Probot App :tada:
 
 1. Install the [WIP app](https://probot.github.io/apps/wip/) to this repository.
-  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46620238-05dec680-cad9-11e8-8fb6-583dd5d9d5b0.png). This one will do just fine.  
+  - Don't install on [ALL of your repositories](https://user-images.githubusercontent.com/13326548/46620238-05dec680-cad9-11e8-8fb6-583dd5d9d5b0.png). This one will do just fine.
 
 <hr>
 <h3 align="center">Look for my response below</h3>
@@ -115,9 +115,9 @@ TEXT:
 
 For the final exercise, we're going to install another app to this repository and teach you about one last file that you'll find valuable to some GitHub Apps.
 
-### :keyboard: Activity: Install another app  
+### :keyboard: Activity: Install another app
 
-1. Install the [request info app](https://probot.github.io/apps/request-info/).  
+1. Install the [request info app](https://probot.github.io/apps/request-info/).
 
 <hr>
 <h3 align="center">Look for my response in a comment on this issue</h3>
@@ -128,7 +128,7 @@ BOT: Responds with 02_request-info-install-success.md
 
 TEXT:
 
-Describe how an app consumes and acts on information from a webhook  
+Describe how an app consumes and acts on information from a webhook
 
 ### :keyboard: Activity: Change the default message of your config.yml file
 

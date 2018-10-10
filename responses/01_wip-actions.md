@@ -4,15 +4,15 @@ Actions that a person or tool takes on GitHub can be used to trigger events. Cre
 
 When you install an app, you give the app permission to receive some of this data from GitHub. That data allows the apps to react in ways that are useful to you. You can also allow the app to send information back, or change information completely.
 
-GitHub Apps are very different from OAuth apps, which have a different installation flow and often require machine users to act on their behalf. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+GitHub Apps are very different from OAuth Apps, which have a different installation flow and often require machine users to act on their behalf. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
 
 ## The WIP app
 
-The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.  
+The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.
 
 ### :keyboard: Activity: Testing an app
 
-1. Add [WIP] to the title of this PR.
+1. Add `WIP` to the title of this pull request
 
 <hr>
-<h3 align="center">After changing the title, look for my response in a comment on this PR</h3>
+<h3 align="center">After changing the title, look for my response in this pull request</h3>
