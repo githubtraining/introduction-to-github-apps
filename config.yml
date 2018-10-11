@@ -6,28 +6,43 @@ template:
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
   repo: introduction-to-github-apps-template
 before:
-  - type: updateBranchProtection
-  - type: createPullRequest
+  # - type: updateBranchProtection
+  # - type: createIssue
+  #   title: Introduction to GitHub Apps
+  #   head: intro-gh-apps
+  #   body: 01_intro-gh-apps.md
+  - type: createIssue
     title: Introduction to GitHub Apps
-    head: intro-gh-apps
-    body: 01_intro-gh-apps.md
+    body: 00_intro-gh-apps.md
+
 steps:
-  - title: Install your first GitHub App then assign yourself to the pull request
-    description: Learn what a GitHub App is and how to install it
-    event: "pull_request.assigned"
-    link: '{{ repoUrl }}/pull/1'
+  - title: Install your first GitHub Apps
+    description: Learn what GitHub Apps are and how to install them
+    event: issue.closed
+    link: '{{ repoUrl }}/issue/1'
     actions:
-      - type: gate
-        left: "%payload.assignee.login%"
-        operator: "==="
-        right: "%user.username%"
-      - type: respond
-        with: 01_wip-actions.md
+    - type: updateBranchProtection
+    - type: createPullRequest
+      title: Trigger the WIP app
+      head: intro-gh-apps
+      body: 01_wip-actions.md
+
+  # - title: Install your first GitHub App then assign yourself to the pull request
+  #   description: Learn what a GitHub App is and how to install it
+  #   event: "pull_request.assigned"
+  #   link: '{{ repoUrl }}/pull/1'
+  #   actions:
+  #     - type: gate
+  #       left: "%payload.assignee.login%"
+  #       operator: "==="
+  #       right: "%user.username%"
+  #     - type: respond
+  #       with: 01_wip-actions.md
 
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
     event: "pull_request.edited"
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
@@ -42,13 +57,13 @@ steps:
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
     event: pull_request.edited
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: '/\WIP/g'
         operator: '!test'
         right: '%payload.pull_request.title%'
-        else: 
+        else:
           - type: respond
             with: 02_WIP-error-message2.md
       - type: removeBranchProtection
@@ -58,29 +73,58 @@ steps:
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
-    - type: gate
-      left: '%payload.pull_request.merged%'
-      else:
+      - type: gate
+        left: '%payload.pull_request.merged%'
+        else:
+          - type: respond
+            with: 02_accidental-close.md
       - type: respond
-        with: 02_accidental-close.md
-    - type: updateBranchProtection
-    - type: createPullRequest
-      title: Practice makes perfect
-      body: 03_blank-PR.md
-      head: request-info
-      action_id: new_pr
-    - type: respond
-      issue: 1
-      with: 02_next-pull-request.md
-      data:
-        url: '%actions.new_pr.data.html_url%'
+        with: 01_next-pull-request.md
+
+  # - title: "Open a pull request"
+  #   description: "Open a pull request to propose your new file to the codebase."
+  #   event: "issue_comment.created"
+  #   link: '{{ repoURL }}/pull/2'
+  #   actions:
+  #     - type: respond
+  #       with: 02_request-info-install-success.md
+  #       else:
+  #         - type: respond
+  #           with: 02_request-info-install.md
+
+  - title: Open a pull request
+    description: Open a pull request to learn about the request info app.
+    event: pull_request.opened
+    head: request-info
+    link: '{{ repoURL }}/pull/3'
+    actions:
+      - type: gate
+        left: '%payload.pull_request.body%'
+        required: false
+        else:
+          - type: respond
+            with: 02_request-info-install-failure.md
+      - type: respond
+        with: 02_request-info-install-success.md
+
+    # - type: updateBranchProtection
+    # - type: createPullRequest
+    #   title: Practice makes perfect
+    #   body: 03_blank-PR.md
+    #   head: request-info
+    #   action_id: new_pr
+    # - type: respond
+    #   issue: 1
+    #   with: 02_next-pull-request.md
+    #   data:
+    #     url: '%actions.new_pr.data.html_url%'
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/3'
     actions:
       - type: octokit
         method: pullRequests.getFiles
@@ -94,7 +138,7 @@ steps:
         right: 'filename:config.yml'
         else:
           - type: mergePullRequest
-            pullRequest: 2
+            pullRequest: 3
           - type: createIssue
             title: Congratulations!
             body: 03_graceful-exit.md
