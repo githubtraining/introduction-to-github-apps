@@ -30,12 +30,7 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 
 When you **remove** WIP from the pull request title, I'll automatically merge the unblocked pull request and give you a new set of instructions.
 
-<details><summary>Are apps listening to everything I do? Are they stealing my data?</summary>	
-
-Nope! Each application will ask you for specific permission to fulfill its purpose. In this case, the app might scan for your issue or pull request context, but only to determine if the content is empty.	
-
 This has been happening throughout this course! I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.	
-</details>
 
 ### :keyboard: Activity: Remove WIP from pull request title
 I've made some more changes to this pull request, so it's no longer a work in progress.
