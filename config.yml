@@ -63,6 +63,8 @@ steps:
         else:
           - type: respond
             with: smee-install-error.md
+            data:
+             repoUrl: '%payload.repository.html_url%'
       - type: respond
         with: smee-install-success.md
 
