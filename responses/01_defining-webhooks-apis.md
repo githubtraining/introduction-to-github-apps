@@ -21,6 +21,7 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 When you **remove** WIP from the pull request title, I'll automatically merge the unblocked pull request and give you a new set of instructions.
 
 ### :keyboard: Activity: Remove WIP from pull request title
+I've made some more changes to this pull request, so it's no longer a work in progress.
 
 1. To the right of the pull request title, click the **Edit** button
 1. Remove `WIP` from the title

@@ -3,8 +3,7 @@ tagline: Get started with GitHub Apps in a flash
 description: Add your own GitHub feature, automate workflows, and more with GitHub Apps.
 template:
   name: introduction-to-github-apps
-  url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
-  repo: introduction-to-github-apps-template
+  repo: games
 before:
   - type: createIssue
     title: Getting started with GitHub Apps
@@ -19,7 +18,7 @@ steps:
     - type: updateBranchProtection
     - type: createPullRequest
       title: Trigger the app
-      head: intro-gh-apps
+      head: add-to-list
       body: 01_wip-actions.md
       action_id: first_pr
     - type: respond
@@ -39,6 +38,9 @@ steps:
         else:
           - type: respond
             with: 02_WIP-error-message.md
+      - type: mergeBranch
+        head: finish-list
+        base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
 
