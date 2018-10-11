@@ -6,7 +6,16 @@ When you install an app, you give the app permission to receive some of this dat
 
 It's important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
 
-Also, GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+## App components
+
+An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.	When you install a home security system, you need to worry about a few components:
+
+- **Electricity** to have the power to run continuously. You don't want failure when you aren't watching.
+- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
+- A **location** that will be watched.
+- **Notification delivery service** -- either to your phone, a dedicated security service, or both.
+
+Just like a home security system, a GitHub App only watches for specific behaviors, and then responds in predetermined ways.
 
 ## The WIP app
 
