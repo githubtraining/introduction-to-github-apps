@@ -4,7 +4,18 @@ Actions that a person or tool takes on GitHub can be used to trigger events. Cre
 
 When you install an app, you give the app permission to receive some of this data from GitHub. That data allows the apps to react in ways that are useful to you. You can also allow the app to send information back, or change information completely.
 
-It's also important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work. Also, GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+It's important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
+
+## App components
+
+An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.	When you install a home security system, you need to worry about a few components:
+
+- **Electricity** to have the power to run continuously. You don't want failure when you aren't watching.
+- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
+- A **location** that will be watched.
+- A **notification delivery service** -- either to your phone, a dedicated security service, or both.
+
+Just like a home security system, a GitHub App only watches for specific behaviors, and then responds in predetermined ways.
 
 ## The WIP app
 

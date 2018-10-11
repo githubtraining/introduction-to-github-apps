@@ -79,6 +79,22 @@ steps:
       - type: removeBranchProtection
       - type: respond
         with: 01_merge-success.md
+        
+  - title: Determine which event triggered the WIP app
+    description: Examine the SMEE URL and determine which event name caused the app to respond
+    event: "issue_comment.created"
+    link: '{{ repoUrl }}/pull/1'
+    actions:
+      - type: gate
+        left: 'pull_request'
+        operator: test
+        right: '%payload.comment.body%'
+        else:
+          - type: respond
+            with: wip-comment-failure.md
+      - type: respond
+        with: wip-comment-success.md
+        
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
