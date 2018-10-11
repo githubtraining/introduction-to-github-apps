@@ -13,10 +13,9 @@ For the next exercise, let's add our own notification service to get a better id
 
 ### :keyboard: Activity: Adding a webhook payload delivery service
 
-1. Navigate to https://smee.io/
+1. Navigate to https://smee.io/ in another tab or window (keep this tab open for the rest of the course). 
 1. Click **Start a new channel**  
 1. Copy your unique "Webhook Proxy URL"
-1. Keep your smee tab open for the rest of the course, and return to this repository in another tab or window
 1. In [your webhooks settings]({{ repoUrl }}/settings/hooks), click **Add webhook**
 1. Paste your unique smee URL in the "Payload URL" field
 1. Leave the "Secret" field blank
