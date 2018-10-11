@@ -101,7 +101,7 @@ steps:
         number: '%payload.pull_request.number%'
         action_id: pr_files
       - type: gate
-        left: '%actions.pr_files.data%'
+        left: '%actions.pr_files.data.items%'
         operator: includes
         right: 'filename:.github/config.yml'
         else:
