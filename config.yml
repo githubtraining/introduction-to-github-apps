@@ -13,7 +13,7 @@ before:
 steps:
   - title: Install your first GitHub Apps
     description: Learn what GitHub Apps are and how to install them
-    event: issue.closed
+    event: issues.closed
     link: '{{ repoUrl }}/issues/1'
     actions:
     - type: updateBranchProtection
