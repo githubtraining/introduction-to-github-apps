@@ -56,24 +56,15 @@ steps:
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
-    - type: gate
-      left: '%payload.pull_request.merged%'
-      else:
+      - type: gate
+        left: '%payload.pull_request.merged%'
+        else:
+          - type: respond
+            with: 02_accidental-close.md
       - type: respond
-        with: 02_accidental-close.md
-    - type: updateBranchProtection
-    - type: createPullRequest
-      title: Practice makes perfect
-      body: 03_blank-PR.md
-      head: request-info
-      action_id: new_pr
-    - type: respond
-      issue: 1
-      with: 02_next-pull-request.md
-      data:
-        url: '%actions.new_pr.data.html_url%'
+        with: 01_next-pull-request.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
