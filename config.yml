@@ -8,7 +8,7 @@ template:
 before:
   - type: updateBranchProtection
   - type: createPullRequest
-    title: Introduction to GitHub Apps
+    title: Getting started with GitHub Apps
     head: intro-gh-apps
     body: 01_intro-gh-apps.md
 steps:
