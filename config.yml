@@ -43,6 +43,8 @@ steps:
         base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
+        data:
+         repoUrl: '%payload.repository.html_url%'
 
   - title: Add a webhook
     description: Add a SMEE URL to your repository's web hooks
@@ -79,7 +81,7 @@ steps:
       - type: removeBranchProtection
       - type: respond
         with: 01_merge-success.md
-        
+
   - title: Determine which event triggered the WIP app
     description: Examine the SMEE URL and determine which event name caused the app to respond
     event: "issue_comment.created"
@@ -94,7 +96,7 @@ steps:
             with: wip-comment-failure.md
       - type: respond
         with: wip-comment-success.md
-        
+
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
@@ -164,4 +166,3 @@ steps:
     actions:
     - type: respond
       with: 03_graceful-exit.md
-      
