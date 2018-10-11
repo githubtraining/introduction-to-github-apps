@@ -21,8 +21,11 @@ steps:
       title: Trigger the app
       head: intro-gh-apps
       body: 01_wip-actions.md
+      action_id: first_pr
     - type: respond
       with: 01_successful-close.md
+      data:
+        url: '%actions.first_pr.data.html_url' 
 
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
