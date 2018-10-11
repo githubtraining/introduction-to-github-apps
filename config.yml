@@ -85,6 +85,7 @@ steps:
         left: '%payload.pull_request.body%'
         operator: '!=='
         right: ""
+        required: false
         else:
           - type: respond
             with: 02_request-info-install-failure.md
