@@ -3,7 +3,6 @@ tagline: Get started with GitHub Apps in a flash
 description: Add your own GitHub feature, automate workflows, and more with GitHub Apps.
 template:
   name: introduction-to-github-apps
-  url: "https://github.com/githubtraining/games.git"
   repo: games
 before:
   - type: createIssue
