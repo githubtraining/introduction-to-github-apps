@@ -6,23 +6,21 @@ template:
   url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
   repo: introduction-to-github-apps-template
 before:
-  - type: updateBranchProtection
-  - type: createPullRequest
-    title: Getting started with GitHub Apps
-    head: intro-gh-apps
-    body: 01_intro-gh-apps.md
+  - type: createIssue
+    title: Introduction to GitHub Apps
+    body: 00_intro-gh-apps.md
+
 steps:
-  - title: Install your first GitHub App then assign yourself to the pull request
-    description: Learn what a GitHub App is and how to install it
-    event: "pull_request.assigned"
-    link: '{{ repoUrl }}/pull/1'
+  - title: Install your first GitHub Apps
+    description: Learn what GitHub Apps are and how to install them
+    event: issue.closed
+    link: '{{ repoUrl }}/issue/1'
     actions:
-      - type: gate
-        left: "%payload.assignee.login%"
-        operator: "==="
-        right: "%user.username%"
-      - type: respond
-        with: 01_wip-actions.md
+    - type: updateBranchProtection
+    - type: createPullRequest
+      title: Trigger the WIP app
+      head: intro-gh-apps
+      body: 01_wip-actions.md
 
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
