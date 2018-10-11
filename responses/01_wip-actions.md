@@ -13,7 +13,7 @@ An app is like a home security system. It's equipped to watch your house at all 
 - **Electricity** to have the power to run continuously. You don't want failure when you aren't watching.
 - **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
 - A **location** that will be watched.
-- **Notification delivery service** -- either to your phone, a dedicated security service, or both.
+- A **notification delivery service** -- either to your phone, a dedicated security service, or both.
 
 Just like a home security system, a GitHub App only watches for specific behaviors, and then responds in predetermined ways.
 
