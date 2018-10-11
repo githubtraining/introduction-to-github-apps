@@ -51,6 +51,8 @@ steps:
     actions:
       - type: octokit
         method: repos.getHooks
+        owner: '%payload.repository.owner.login%'
+        repo: '%payload.repository.name%'
         action_id: hooks
       - type: gate
         left: '%actions.hooks.data.length%'
