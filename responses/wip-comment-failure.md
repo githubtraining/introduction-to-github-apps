@@ -1,1 +1,17 @@
-THIS IS A FAILURE WIP COMMENT
+Oops! It looks like smee might not be installed successfully yet. Try the activity below one more time.
+
+### :keyboard: Activity: Adding a webhook payload delivery service
+
+1. Navigate to https://smee.io/
+1. Click **Start a new channel**  
+1. Copy your unique "Webhook Proxy URL"
+1. Keep your smee tab open for the rest of the course, and return to this repository in another tab or window
+1. In [your webhooks settings]({{ repoUrl }}/settings/hooks), click **Add webhook**
+1. Paste your unique smee URL in the "Payload URL" field
+1. Leave the "Secret" field blank
+1. For "Which events would you like to trigger this webhook?", select "Send me everything"
+1. Click **Add webhook**
+1. Return to this PR and paste your smee URL as a comment
+
+<hr>
+<h3 align="center">Look for my response in a comment on this pull request</h3>
