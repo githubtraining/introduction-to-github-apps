@@ -80,6 +80,7 @@ steps:
         left: '%payload.pull_request.head.ref%'
         operator: ===
         right: request-info
+      - type: updateBranchProtection
       - type: gate
         left: '%payload.pull_request.body%'
         else:
