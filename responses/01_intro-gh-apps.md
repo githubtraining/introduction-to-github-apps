@@ -15,8 +15,8 @@ GitHub Apps allow you to change GitHub's surface-level functionality. With webho
 
 To learn more about GitHub Apps, let's install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
 
-1) **[WIP Probot app](https://probot.github.io/apps/wip/)** "WIP" is a common abbreviation to mean **work in progress**.
-2) [**Request Info**](https://probot.github.io/apps/request-info/).  
+1) **[WIP Probot app](https://probot.github.io/apps/wip/)** "WIP" is a common abbreviation to mean **work in progress**
+2) [**Request Info**](https://probot.github.io/apps/request-info/)
 
 After you install these apps, close this issue out. That way, I'll know you've completed your task and are ready to tackle this course.
 
