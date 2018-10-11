@@ -1,5 +1,3 @@
-Success
-
 ## Request Info app
 When a user opens an empty issue or pull request, the Request Info app will do exactly that -- request some more information. It won't work until we finish the next task.
 
