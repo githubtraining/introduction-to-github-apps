@@ -77,7 +77,6 @@ steps:
         right: request-info
       - type: gate
         left: '%payload.pull_request.body%'
-        required: false
         else:
           - type: respond
             with: 02_request-info-install-failure.md
