@@ -1,4 +1,4 @@
-# Welcome to the Introduction to GitHub Apps course
+# Welcome to Getting started with GitHub Apps
 
 Before we start using real GitHub applications, let's get some foundations out of the way.
 
