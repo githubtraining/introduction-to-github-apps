@@ -83,8 +83,8 @@ steps:
       - type: updateBranchProtection
       - type: gate
         left: '%payload.pull_request.body%'
-        operator: !==
-        right: ''
+        operator: '!=='
+        right: ""
         else:
           - type: respond
             with: 02_request-info-install-failure.md
