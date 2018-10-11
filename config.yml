@@ -18,7 +18,7 @@ steps:
     actions:
     - type: updateBranchProtection
     - type: createPullRequest
-      title: Trigger the WIP app
+      title: Trigger the app
       head: intro-gh-apps
       body: 01_wip-actions.md
 
