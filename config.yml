@@ -43,7 +43,7 @@ steps:
         base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
-  
+
   - title: Add a webhook
     description: Add a SMEE URL to your repository's web hooks
     event: "issue_comment.created"
@@ -138,6 +138,8 @@ steps:
       - type: mergePullRequest
       - type: respond
         with: 02_change-config-success.md
+        data:
+         repoUrl: '%payload.repository.html_url%'
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
@@ -146,3 +148,4 @@ steps:
     actions:
     - type: respond
       with: 03_graceful-exit.md
+      
