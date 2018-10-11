@@ -43,6 +43,24 @@ steps:
         base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
+  
+  - title: Add a webhook
+    description: Add a SMEE URL to your repository's web hooks
+    event: "issue_comment.created"
+    link: '{{ repoUrl }}/pull/1'
+    actions:
+      - type: octokit
+        method: repos.getHooks
+        action_id: hooks
+      - type: gate
+        left: '%actions.hooks.data.length%'
+        operator: '>=='
+        right: 1
+        else:
+          - type: respond
+            with: replace-me-error.md
+      - type: respond
+        with: replace-me-success.md
 
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
