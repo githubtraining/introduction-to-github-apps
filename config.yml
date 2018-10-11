@@ -97,7 +97,7 @@ steps:
       - type: octokit
         method: pullRequests.getFiles
         owner: '%payload.repository.owner.login%'
-        name: '%payload.repository.name%'
+        repo: '%payload.repository.name%'
         number: '%payload.pull_request.number%'
         action_id: pr_files
       - type: gate
