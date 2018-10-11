@@ -105,15 +105,15 @@ steps:
         operator: includes
         right: 'filename:.github/config.yml'
         else:
-          - type: mergePullRequest
-            pullRequest: 2
-          - type: createIssue
-            title: Congratulations!
-            body: 03_graceful-exit.md
-            action_id: last_issue
-          - type: respond
-            with: 02_change-config-success.md
-            data:
-              url: '%actions.last_issue.data.html_url%'
+           - type: respond
+             with: 03_make-file-changes.md
+      - type: mergePullRequest
+        pullRequest: 2
+      - type: createIssue
+        title: Congratulations!
+        body: 03_graceful-exit.md
+        action_id: last_issue
       - type: respond
-        with: 03_make-file-changes.md
+        with: 02_change-config-success.md
+        data:
+          url: '%actions.last_issue.data.html_url%'
