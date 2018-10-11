@@ -9,7 +9,11 @@ For this course, you'll need to know how to create a branch on GitHub, commit ch
 ## Application vs GitHub Application
 There are many types of applications, like the apps you might have on your phone. In this course, we'll focus on **GitHub Applications**, apps designed to work on GitHub.
 
-GitHub Apps allow you to change GitHub's surface-level functionality. With webhooks and GitHub's APIs, GitHub Apps act as top-layer tools that you can use to customize and automate routine processes.
+GitHub Apps allow you to change GitHub's surface-level functionality through webhooks and GitHub's APIs. GitHub Apps act as top-layer tools that you can use to customize and automate routine processes.
+
+Please note that GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+
+This course is about GitHub Apps. 
 
 ### :keyboard: Activity: Install your first apps :tada:
 
