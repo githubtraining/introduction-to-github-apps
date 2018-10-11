@@ -21,6 +21,8 @@ steps:
       title: Trigger the app
       head: intro-gh-apps
       body: 01_wip-actions.md
+    - type: respond
+      with: 01_successful-close.md
 
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
