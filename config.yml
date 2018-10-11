@@ -70,7 +70,7 @@ steps:
       description: Open a pull request to learn about the request info app.
       event: pull_request.opened
       head: request-info
-      link: '{{ repoURL }}/pull/2'
+      link: '{{ repoUrl }}/pull/2'
       actions:
         - type: gate
           left: '%payload.pull_request.body%'
