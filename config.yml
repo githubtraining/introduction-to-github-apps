@@ -83,14 +83,20 @@ steps:
       - type: updateBranchProtection
       - type: gate
         left: '%payload.pull_request.body%'
-        operator: '!=='
+        operator: '==='
         right: ""
         required: false
         else:
           - type: respond
             with: 02_request-info-install-failure.md
-      - type: respond
-        with: 02_request-info-install-success.md
+      - type: gate
+        left: '%payload.pull_request.body%'
+        operator: '!=='
+        right: ""
+        required: false
+        else:
+          - type: respond
+            with: 02_request-info-install-success.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
