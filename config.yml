@@ -99,7 +99,7 @@ steps:
       - type: gate
         left: '%actions.pr_files.data%'
         operator: includes
-        right: 'filename:config.yml'
+        right: 'filename:.github/config.yml'
         else:
           - type: mergePullRequest
             pullRequest: 3
