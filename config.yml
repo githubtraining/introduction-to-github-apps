@@ -67,13 +67,19 @@ steps:
         with: 01_next-pull-request.md
 
   - title: Open a pull request
-      description: Open a pull request to learn about the request info app
-      event: pull_request.opened
-      head: request-info
-      link: '{{ repoUrl }}/pull/2'
-      actions:
-        - type: respond
-          with: 02_request-info-install-success.md
+    description: Open a pull request to learn about the request info app
+    event: pull_request.opened
+    head: request-info
+    link: '{{ repoUrl }}/pull/2'
+    actions:
+      - type: gate
+        left: '%payload.pull_request.body%'
+        required: false
+        else:
+          - type: respond
+            with: 02_request-info-install-failure.md
+      - type: respond
+        with: 02_request-info-install-success.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
