@@ -110,6 +110,7 @@ steps:
         else:
            - type: respond
              with: 03_make-file-changes.md
+      - type: removeBranchProtection
       - type: mergePullRequest
       - type: createIssue
         title: Congratulations!
