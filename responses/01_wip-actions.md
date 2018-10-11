@@ -4,7 +4,9 @@ Actions that a person or tool takes on GitHub can be used to trigger events. Cre
 
 When you install an app, you give the app permission to receive some of this data from GitHub. That data allows the apps to react in ways that are useful to you. You can also allow the app to send information back, or change information completely.
 
-It's also important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work. Also, GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+It's also important to mention that GitHub Apps are not people. You can't interact with them by doing things like using an @mention, or assigning them to review your work.
+
+Also, GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
 
 ## The WIP app
 
