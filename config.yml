@@ -8,7 +8,7 @@ template:
 before:
   - type: createIssue
     title: Introduction to GitHub Apps
-    body: 00_intro-gh-apps.md
+    body: 01_intro-gh-apps.md
 
 steps:
   - title: Install your first GitHub Apps
