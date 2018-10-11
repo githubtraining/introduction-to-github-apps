@@ -1,43 +1,28 @@
-## WIP response
-When you added "WIP" to the title of this pull request, something changed. Do you see that the pull request's status is "pending" with and yellow dot? This is to block merging while the title includes "WIP".
+Nice job! Something changed on this repo when you added the "WIP" command. Let's get more familiar with how an app works before we explore those changes.
 
-Here's what's happening under-the-hood with the WIP app.
+## Breaking down the WIP app components
 
-1. The app listens specifically for a change to a pull request title
-2. When a pull request title changes, the app searches for the key-word, **"WIP"**
-3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
+- **Electricity**: Since this is a Probot app, the power to run comes from hosting and deployment that the creators of the app had to set up. We don't need to worry about this unless we build an app ourselves.
+- **Standard behaviors**: GitHub has a list of [documented actions](https://developer.github.com/webhooks/#events) that can alert an app.
+- **Location**: Apps are designed to look for those actions in whichever repositories they've been installed.
+- **Notification service**: If the expected action occurs, a notification delivery is sent to the app as a webhook payload -- a specific set of data transmitted via GitHub's API.
 
-Each application will ask you for specific permission to fulfill its purpose. In this case, the app might scan for your issue or pull request context, but only to determine if the content is empty.
+GitHub Apps will then process this data in the background, responding to the repository with their expected default actions.
 
-This has been happening throughout this course. I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.
+For the next exercise, let's add our own notification service to get a better idea of what apps are receiving behind the scenes.
 
-### Real life examples
+### :keyboard: Activity: Adding a webhook payload delivery service
 
-An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.	When you install a home security system, you need to worry about a few components:
-
-- **Electricity** it needs to have the power to run continuously. You don't want failure when you aren't watching.
-- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
-- **Location** that will be watched, and location where you view reports.
-
-Just like a home security system, a GitHub App only watches for specific things, and responds in specific ways.
-
-## APIs and Webhooks
-APIs and Webhooks go hand in hand, but the distinction between them is important.
-
-- Webhooks are specific "noise" interpreters. They listen for specific events to occur as their trigger.
-- Once triggered, the GitHub API sends a payload of data to a predefined location that's related to the event.
-- The GitHub API can send information or make changes to the platform, but only when asked. The GitHub API _and_ GitHub's webhooks are both key components of GitHub Apps.
-
-When you **remove** WIP from the pull request title, I'll automatically merge the unblocked pull request and give you a new set of instructions.
-
-This has been happening throughout this course! I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.	
-
-### :keyboard: Activity: Remove WIP from pull request title
-I've made some more changes to this pull request, so it's no longer a work in progress.
-
-1. To the right of the pull request title, click the **Edit** button
-1. Remove `WIP` from the title
-1. Click **Save**
+1. Navigate to https://smee.io/
+1. Click **Start a new channel**  
+1. Copy your unique "Webhook Proxy URL"
+1. Keep your smee tab open for the rest of the course, and return to this repository in another tab or window
+1. In [your webhooks settings]({{ repoUrl }}/settings/hooks), click **Add webhook**
+1. Paste your unique smee URL in the "Payload URL" field
+1. Leave the "Secret" field blank
+1. For "Which events would you like to trigger this webhook?", select "Send me everything"
+1. Click **Add webhook**
+1. Return to this PR and paste your smee URL as a comment
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
