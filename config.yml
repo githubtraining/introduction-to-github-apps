@@ -137,8 +137,9 @@ steps:
       - type: removeBranchProtection
       - type: mergePullRequest
       - type: respond
-        action_id: last_issue
         with: 02_change-config-success.md
+        data:
+         repoUrl: '%payload.repository.html_url%'
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
@@ -147,5 +148,4 @@ steps:
     actions:
     - type: respond
       with: 03_graceful-exit.md
-      data:
-        url: '%actions.last_issue.data.html_url%'
+      
