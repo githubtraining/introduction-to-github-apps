@@ -21,8 +21,8 @@ steps:
     event: issue.closed
     link: '{{ repoUrl }}/issue/1'
     actions:
-    - type: createPullRequest
     - type: updateBranchProtection
+    - type: createPullRequest
       title: Trigger the WIP app
       head: intro-gh-apps
       body: 01_wip-actions.md
