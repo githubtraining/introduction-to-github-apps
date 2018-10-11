@@ -56,7 +56,7 @@ steps:
         action_id: hooks
       - type: gate
         left: '%actions.hooks.data.length%'
-        operator: '>=='
+        operator: '>='
         right: 1
         else:
           - type: respond
