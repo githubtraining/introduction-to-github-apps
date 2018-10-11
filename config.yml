@@ -19,7 +19,7 @@ steps:
     - type: updateBranchProtection
     - type: createPullRequest
       title: Trigger the app
-      head: intro-gh-apps
+      head: add-to-list
       body: 01_wip-actions.md
       action_id: first_pr
     - type: respond
@@ -39,6 +39,9 @@ steps:
         else:
           - type: respond
             with: 02_WIP-error-message.md
+      - type: mergeBranch
+        head: finish-list
+        base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
 
