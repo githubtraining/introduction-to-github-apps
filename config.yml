@@ -57,7 +57,7 @@ steps:
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
     event: pull_request.edited
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/1'
     actions:
       - type: gate
         left: '/\WIP/g'
@@ -73,7 +73,7 @@ steps:
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/1'
     actions:
     - type: gate
       left: '%payload.pull_request.merged%'
@@ -94,20 +94,20 @@ steps:
   #         - type: respond
   #           with: 02_request-info-install.md
 
-- title: Open a pull request
-    description: Open a pull request to learn about the request info app.
-    event: pull_request.opened
-    head: request-info
-    link: '{{ repoURL }}/pull/3'
-    actions:
-      - type: gate
-        left: '%payload.pull_request.body%'
-        required: false
-        else:
+  - title: Open a pull request
+      description: Open a pull request to learn about the request info app.
+      event: pull_request.opened
+      head: request-info
+      link: '{{ repoURL }}/pull/2'
+      actions:
+        - type: gate
+          left: '%payload.pull_request.body%'
+          required: false
+          else:
+            type: respond
+            with: 02_request-info-install-failure.md
           type: respond
-          with: 02_request-info-install-failure.md
-        type: respond
-        with: 02_request-info-install-success.md
+          with: 02_request-info-install-success.md
 
     # - type: updateBranchProtection
     # - type: createPullRequest
@@ -124,7 +124,7 @@ steps:
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pull/3'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: octokit
         method: pullRequests.getFiles
