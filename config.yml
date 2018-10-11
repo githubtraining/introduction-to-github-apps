@@ -3,8 +3,8 @@ tagline: Get started with GitHub Apps in a flash
 description: See how automation can improve your workflow and reduce friction with GitHub Apps
 template:
   name: introduction-to-github-apps
-  url: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
-  repo: introduction-to-github-apps-template
+  repo: "https://github.com/githubtraining/introduction-to-github-apps-template.git"
+  # repo: introduction-to-github-apps-template
 before:
   # - type: updateBranchProtection
   # - type: createIssue
