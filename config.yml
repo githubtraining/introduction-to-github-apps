@@ -48,7 +48,7 @@ steps:
     description: Add a SMEE URL to your repository's web hooks
     event: "issue_comment.created"
     link: '{{ repoUrl }}/pull/1'
-    actions
+    actions:
       - type: octokit
         method: repos.getHooks
         action_id: hooks
