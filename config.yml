@@ -79,9 +79,9 @@ steps:
         left: '%payload.pull_request.body%'
         else:
           - type: respond
-            with: 02_request-info-install-failure.md
+            with: 02_request-info-install-success.md
       - type: respond
-        with: 02_request-info-install-success.md
+        with: 02_request-info-install-failure.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
