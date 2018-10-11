@@ -69,9 +69,12 @@ steps:
   - title: Open a pull request
     description: Open a pull request to learn about the request info app
     event: pull_request.opened
-    head: request-info
     link: '{{ repoUrl }}/pull/2'
     actions:
+      - type: gate
+        left: '%payload.pull_request.head.ref%'
+        operator: ===
+        right: request-info
       - type: gate
         left: '%payload.pull_request.body%'
         required: false
