@@ -11,6 +11,16 @@ Each application will ask you for specific permission to fulfill its purpose. In
 
 This has been happening throughout this course. I've been waiting for you to perform certain expected actions as `Learning Lab`. Applications only respond when certain actions trigger webhooks. For example, if you close this pull request, `WIP` won't do anything.
 
+### Real life examples
+
+An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.	When you install a home security system, you need to worry about a few components:
+
+- **Electricity** it needs to have the power to run continuously. You don't want failure when you aren't watching.
+- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
+- **Location** that will be watched, and location where you view reports.
+
+Just like a home security system, a GitHub App only watches for specific things, and responds in specific ways.
+
 ## APIs and Webhooks
 APIs and Webhooks go hand in hand, but the distinction between them is important.
 
