@@ -12,7 +12,7 @@ before:
   #   head: intro-gh-apps
   #   body: 01_intro-gh-apps.md
   - type: createIssue
-    title: Introduction to GitHub Apps
+    title: Getting started with GitHub Apps
     body: 00_intro-gh-apps.md
 
 steps:
