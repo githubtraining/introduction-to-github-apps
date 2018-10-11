@@ -36,6 +36,7 @@ This has been happening throughout this course! I've been waiting for you to per
 </details>
 
 ### :keyboard: Activity: Remove WIP from pull request title
+I've made some more changes to this pull request, so it's no longer a work in progress.
 
 1. To the right of the pull request title, click the **Edit** button
 1. Remove `WIP` from the title
