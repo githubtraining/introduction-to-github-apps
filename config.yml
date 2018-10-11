@@ -126,4 +126,3 @@ steps:
     actions:
     - type: respond
       with: 03_graceful-exit.md
-      action_id: last_issue
