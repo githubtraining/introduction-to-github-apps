@@ -100,7 +100,7 @@ steps:
         right: 'filename:config.yml'
         else:
           - type: mergePullRequest
-            pullRequest: 2
+            pullRequest: 3
           - type: createIssue
             title: Congratulations!
             body: 03_graceful-exit.md
