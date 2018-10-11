@@ -7,7 +7,7 @@ template:
   repo: introduction-to-github-apps-template
 before:
   - type: createIssue
-    title: Introduction to GitHub Apps
+    title: Getting started with GitHub Apps
     body: 01_intro-gh-apps.md
 
 steps:
