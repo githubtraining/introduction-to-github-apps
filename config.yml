@@ -83,11 +83,14 @@ steps:
       - type: updateBranchProtection
       - type: gate
         left: '%payload.pull_request.body%'
+        operator: '!=='
+        right: ""
+        required: false
         else:
           - type: respond
-            with: 02_request-info-install-success.md
+            with: 02_request-info-install-failure.md
       - type: respond
-        with: 02_request-info-install-failure.md
+        with: 02_request-info-install-success.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
@@ -107,6 +110,7 @@ steps:
         else:
            - type: respond
              with: 03_make-file-changes.md
+      - type: removeBranchProtection
       - type: mergePullRequest
       - type: createIssue
         title: Congratulations!
