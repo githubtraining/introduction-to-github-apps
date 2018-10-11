@@ -62,9 +62,9 @@ steps:
         right: 1
         else:
           - type: respond
-            with: replace-me-error.md
+            with: smee-install-error.md
       - type: respond
-        with: replace-me-success.md
+        with: smee-install-success.md
 
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
