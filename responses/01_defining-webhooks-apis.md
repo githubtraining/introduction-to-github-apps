@@ -1,4 +1,4 @@
-Nice job! Something changed on this repo when you added the "WIP" command. Let's get more familiar with how an app works before we explore those changes.
+Nice job! Something changed on this repo when you added the "WIP" command. Let's try to get more insight into our app before we look at those changes.
 
 ## Breaking down the WIP app components
 
