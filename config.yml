@@ -108,7 +108,6 @@ steps:
            - type: respond
              with: 03_make-file-changes.md
       - type: mergePullRequest
-        pullRequest: 3
       - type: createIssue
         title: Congratulations!
         body: 03_graceful-exit.md
