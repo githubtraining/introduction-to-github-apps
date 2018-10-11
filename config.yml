@@ -43,7 +43,7 @@ steps:
         base: add-to-list
       - type: respond
         with: 01_defining-webhooks-apis.md
-  
+
   - title: Add a webhook
     description: Add a SMEE URL to your repository's web hooks
     event: "issue_comment.created"
@@ -137,6 +137,7 @@ steps:
       - type: removeBranchProtection
       - type: mergePullRequest
       - type: respond
+        action_id: last_issue
         with: 02_change-config-success.md
 
   - title: Open a blank issue
@@ -146,3 +147,5 @@ steps:
     actions:
     - type: respond
       with: 03_graceful-exit.md
+      data:
+        url: '%actions.last_issue.data.html_url%'
