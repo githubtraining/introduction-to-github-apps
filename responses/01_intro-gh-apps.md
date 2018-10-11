@@ -11,16 +11,9 @@ There are many types of applications, like the apps you might have on your phone
 
 GitHub Apps allow you to change GitHub's surface-level functionality. With webhooks and GitHub's APIs, GitHub Apps act as top-layer tools that you can use to customize and automate routine processes.
 
-## Installing a GitHub App
-
-To learn more about GitHub Apps, let's install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
-
-1) **[WIP Probot app](https://probot.github.io/apps/wip/)** "WIP" is a common abbreviation to mean **work in progress**.
-2) [**Request Info**](https://probot.github.io/apps/request-info/).
-
-After you install these apps, close this issue out. That way, I'll know you've completed your task and are ready to tackle this course.
-
 ### :keyboard: Activity: Install your first apps :tada:
+
+To learn more about GitHub Apps, you will install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
 
 1. Install the <a href="https://probot.github.io/apps/wip/" target="_blank">WIP app</a> to this repository
 1. Install the <a href="https://probot.github.io/apps/request_info/" target="_blank">Request Info app</a> to this repository

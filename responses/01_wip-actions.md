@@ -8,6 +8,8 @@ It's also important to mention that GitHub Apps are not people. You can't intera
 
 ## The WIP app
 
+**WIP** is a common abbreviation to mean **work in progress**.
+
 The app you've just installed is concerned with one action: changing the title of a pull request. Let's test it out and see what the result is by updating the title of this pull request.
 
 ### :keyboard: Activity: Test the app by editing the pull request title
