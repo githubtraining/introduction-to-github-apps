@@ -25,7 +25,7 @@ steps:
     - type: respond
       with: 01_successful-close.md
       data:
-        url: '%actions.first_pr.data.html_url' 
+        url: '%actions.first_pr.data.html_url%' 
 
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
