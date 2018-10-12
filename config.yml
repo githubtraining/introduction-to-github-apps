@@ -96,7 +96,6 @@ steps:
         right: '%payload.comment.body%'
         required: false
         else:
-          - type: removeBranchProtection
           - type: respond
             with: 02_webhook-comment-failure.md
       - type: removeBranchProtection
