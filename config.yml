@@ -189,4 +189,4 @@ steps:
     link: '{{ repoUrl }}/issues/2'
     actions:
     - type: respond
-      with: 03_graceful-exit.md
+      with: 04_graceful-exit.md
