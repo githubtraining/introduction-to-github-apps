@@ -144,8 +144,8 @@ steps:
         right: false
         required: false
         else:
-          - type: "respond"
-            with: "03_configuring-apps.md"
+          type: "respond"
+          with: "03_configuring-apps.md"
       - type: "gate"
         action_id: "second_gate"
         left: "%actions.body_gate%"
@@ -153,8 +153,8 @@ steps:
         right: true
         required: false
         else:
-          - type: "respond"
-            with: "03_included-text.md"
+          type: "respond"
+          with: "03_included-text.md"
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the app's default behavior
