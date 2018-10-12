@@ -1,4 +1,4 @@
-Great work! That's the correct API endpoint. 
+Great work! That's the correct API endpoint.
 
 ## APIs and Webhooks
 APIs and Webhooks go hand in hand, but the distinction between them is important.
@@ -8,4 +8,5 @@ APIs and Webhooks go hand in hand, but the distinction between them is important
 - The GitHub API can send information that makes changes to the platform, but only when prompted via webhook.
 - The GitHub API _and_ GitHub's webhooks are both key components of GitHub Apps.
 
-Go open a [blank issue]({{ repoUrl }}/issues/new) to see if the changes you made in your `config.yml` took effect!
+### :keyboard: Activity: Test out your original changes to the config.yml
+1. Go open a [blank issue]({{ repoUrl }}/issues/new) to see if the changes you made in your `config.yml` took effect!
