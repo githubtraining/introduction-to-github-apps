@@ -1,6 +1,6 @@
 # Welcome to Getting started with GitHub Apps
 
-We're going to work together to learn about GitHub Apps! Before we start using real GitHub applications, let's get some foundations out of the way.
+We're going to work together to learn about GitHub Apps! We'll do this in this repository, which is a collection of resources - _games_ to be specific. Before we start using real GitHub applications, let's get some foundations out of the way.
 
 ### New to GitHub?
 
