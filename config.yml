@@ -83,6 +83,8 @@ steps:
       - type: removeBranchProtection
       - type: respond
         with: 01_merge-success.md
+        data:
+         repoUrl: '%payload.repository.html_url%'
 
   - title: Determine which event triggered the WIP app
     description: Examine the SMEE URL and determine which event name caused the app to respond

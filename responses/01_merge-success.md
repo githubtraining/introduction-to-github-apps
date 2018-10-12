@@ -1,6 +1,19 @@
-After you removed WIP from the pull request title, the pull request was unblocked. Now, you're able to merge.
+## WIP below the surface
 
-### :keyboard: Activity: Merge
-1. Merge this pull request, and delete your branch
+Since installation, smee has been running patiently in the background and keeping a ledger of each webhook event that we've performed on the repository.
 
-> _Sometimes I respond too fast for the page to update! If you perform an expected action and don't see a response from me, wait a few seconds and refresh the page for your next steps._
+When you edited the pull request title, that triggered a specific type of event.
+
+When that event was triggered, it sent a payload of data to our app. Each type of event delivers a different payload template to the app. When customizing or creating apps, having this knowledge becomes crucial.
+
+Can you tell which type of event was sent back to the application when you changed the pull request header?
+
+
+### :keyboard: Activity: Connecting actions on GitHub to events and payloads
+
+1. Return to your unique smee.io link, accessible via your [settings]({{ repoUrl }}/settings/hooks) if you closed it
+1. Identify your most recent webhook event
+1. Post the event exactly as it's written in smee.io in a comment on this pull request
+
+<hr>
+<h3 align="center">Look for my response in a comment on this pull request</h3>
