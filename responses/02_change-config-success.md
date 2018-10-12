@@ -2,27 +2,17 @@
 
 Nice job!
 
-In the last pull request, we learned that WIP responds to `pull_request` events, before making changes to the merge status.
+In the last pull request, we've learned about webhooks and how the WIP and Request info apps only respond to specific events. Webhooks allow you to build or set up GitHub Apps which subscribe to certain events on GitHub.com When one of those events is triggered, an HTTP POST payload response is sent to the webhook's configured URL. We saw this with our smee webhook.
 
-Request info is watching **two** events, `issues` and `pull_requests`. Remember, though, that these are broad categories. Tons of behaviors can happen to `issues` and `pull_requests`.
+But webhooks are only one side to this story. To see the other side, meet API endpoints. :wave:
 
-Endpoints, accessible only via the API, allow an app to respond to very specific types of behavior, even though it gets notifications for every possibility.  
+## APIs
 
-For request info, the [documentation](https://developer.github.com/v3/activity/events/types/#pullrequestevent) tells us that the `pull_request` event is triggered when a pull request is assigned, unassigned, labeled, unlabeled, opened, edited, closed, reopened, or synchronized.
+API stands for Application Programming Interface. APIs are used to share data or functionality. This is done by making an HTTP request to an API using an **endpoint**, and then receiving a reponse back.
 
-Since request info responds to blank issues or pull requests, it makes sense that we'd want to narrow our comment responses to the `pull_request.opened` endpoint.
+For example, this is the endpoint to create a new pull request; `POST /repos/:owner/:repo/pulls`
 
-![image](https://user-images.githubusercontent.com/13326548/46848367-3c993300-cd9e-11e8-8542-6138d5e453d9.png)
-
-How does the app respond to a `pull_request.opened` event?
-
-## APIs and Webhooks
-APIs and Webhooks go hand in hand, but the distinction between them is important.
-
-- Webhooks are specific "noise" interpreters. They listen for specific events to occur as their trigger.
-- When an event is triggered, the vastly more detailed GitHub API gives the bot an excessive amount of information (as a payload). The bot takes this payload, alters it slightly, and hands it back to GitHub's API, which delivers the change back to your repository.
-- The GitHub API can send information that makes changes to the platform, but only when prompted via webhook.
-- The GitHub API _and_ GitHub's webhooks are both key components of GitHub Apps.
+When an event is triggered, the vastly more detailed GitHub API gives the bot an excessive amount of information (as a payload). The bot takes this payload, alters it slightly, and hands it back to GitHub's API, which delivers the change back to your repository.
 
 
 ### :keyboard: Activity: Respond with something 
