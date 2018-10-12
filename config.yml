@@ -185,7 +185,7 @@ steps:
         pullRequest: 3
       - type: gate
         left: 'POST /repos/:owner/:repo/labels'
-        operator: !test
+        operator: '!test'
         right: '%payload.comment.body%'
         required: false
         else:
