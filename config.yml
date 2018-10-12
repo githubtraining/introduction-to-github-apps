@@ -172,14 +172,14 @@ steps:
         required: false
         else:
           - type: respond
-            with: replace-api-comment-error.md
+            with: 03_endpoint-comment-error.md
             data:
               repoUrl: '%payload.repository.html_url%'
       - type: removeBranchProtection
       - type: mergePullRequest
         pullRequest: 3
       - type: respond
-        with: replace-api-comment-success.md
+        with: 03_endpoint-comment-success.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
