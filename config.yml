@@ -139,9 +139,9 @@ steps:
         required: false
       - type: "gate"
         left: "%actions.body_gate%"
-        operator: "==="
+        operator: "!=="
         action_id: "first_gate"
-        right: false
+        right: true
         required: false
         else:
           type: "respond"
