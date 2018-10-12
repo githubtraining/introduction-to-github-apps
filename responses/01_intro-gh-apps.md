@@ -1,6 +1,6 @@
 # Welcome to Getting started with GitHub Apps
 
-We're going to work together to learn about GitHub Apps! We'll do this in this repository, which is a collection of resources - _games_ to be specific. Before we start using real GitHub applications, let's get some foundations out of the way.
+We're going to work together to learn about GitHub Apps! Before we start using real GitHub applications, let's get some foundations out of the way.
 
 ### New to GitHub?
 
@@ -15,7 +15,7 @@ Please note that GitHub Apps are very different from OAuth Apps. These have a di
 
 ## Step 1: Get familiar with GitHub Apps
 
-To learn more about GitHub Apps, you will install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
+To learn more about GitHub Apps, you will install two on this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
 
 ### :keyboard: Activity: Install your first apps :tada:
 

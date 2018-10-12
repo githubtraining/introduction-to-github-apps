@@ -11,11 +11,11 @@ It's important to mention that GitHub Apps are not people. You can't interact wi
 An app is like a home security system. It's equipped to watch your house at all times, but only notifies you for specific criteria.	When you install a home security system, you need to worry about a few components:
 
 - **Electricity** to have the power to run continuously. You don't want failure when you aren't watching.
-- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to actions.
+- **Standard behaviors** to detect things like movement, noise, and doors opening. You don't want to have to program it to understand these actions -- you want to select how it responds to them.
 - A **location** that will be watched.
 - A **notification delivery service** -- either to your phone, a dedicated security service, or both.
 
-Just like a home security system, a GitHub App only watches for specific behaviors, and then responds in predetermined ways.
+Just like a home security system, a GitHub App only watches for specific actions, and then responds in predetermined ways.
 
 ## Step 2: Trigger the WIP app
 
