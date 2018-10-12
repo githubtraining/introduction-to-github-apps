@@ -13,8 +13,6 @@ GitHub Apps allow you to change GitHub's surface-level functionality through web
 
 Please note that GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
 
-This course is about GitHub Apps.
-
 ## Step 1: Get familiar with GitHub Apps
 
 To learn more about GitHub Apps, you will install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.

@@ -47,7 +47,7 @@ steps:
          repoUrl: '%payload.repository.html_url%'
 
   - title: Add a webhook
-    description: Add a SMEE URL to your repository's web hooks
+    description: Add a smee.io URL to your repository's webhooks
     event: "issue_comment.created"
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -86,7 +86,7 @@ steps:
          repoUrl: '%payload.repository.html_url%'
 
   - title: Determine which event triggered the WIP app
-    description: Examine the SMEE URL and determine which event name caused the app to respond
+    description: Examine the smee.io URL and determine which event name caused the app to respond
     event: "issue_comment.created"
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -95,13 +95,12 @@ steps:
         operator: test
         right: '%payload.comment.body%'
         else:
+          - type: removeBranchProtection
           - type: respond
             with: 02_webhook-comment-failure.md
       - type: removeBranchProtection
       - type: respond
         with: 02_webhook-comment-success.md
-
-
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
@@ -119,7 +118,7 @@ steps:
          repoUrl: '%payload.repository.html_url%'
 
   - title: Open a pull request
-    description: Open a pull request to learn about the request info app
+    description: Open a pull request to learn about the Request Info app
     event: pull_request.opened
     link: '{{ repoUrl }}/pull/2'
     actions:
@@ -140,7 +139,7 @@ steps:
         with: 03_configuring-apps.md
 
   - title: Customize the response of the Request Info app
-    description: Learn how to customize the apps default behavior
+    description: Learn how to customize the app's default behavior
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/2'
     actions:
