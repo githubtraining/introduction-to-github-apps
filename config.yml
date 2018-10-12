@@ -139,8 +139,8 @@ steps:
         right: ""
         required: false
         else:
-          type: respond
-          with: 03_included-text.md
+          - type: respond
+            with: 03_included-text.md
       - type: gate
         left: '%payload.pull_request.body%'
         operator: '!=='
@@ -202,7 +202,7 @@ steps:
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
-    event: issues.opened
+    event: issue_comment.created
     link: '{{ repoUrl }}/issues/2'
     actions:
     - type: respond
