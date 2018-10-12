@@ -168,14 +168,12 @@ steps:
         left: 'POST /repos/:owner/:repo/labels'
         operator: test
         right: '%payload.comment.body%'
+        required: false
         else:
-          - type: removeBranchProtection
-          - type: mergePullRequest
-            pullRequest: 3
           - type: respond
             with: replace-api-comment-error.md
             data:
-             repoUrl: '%payload.repository.html_url%'
+              repoUrl: '%payload.repository.html_url%'
       - type: removeBranchProtection
       - type: mergePullRequest
         pullRequest: 3
