@@ -135,7 +135,7 @@ steps:
         required: false
         else:
           - type: respond
-            with: 02_included-text.md
+            with: 03_included-text.md
       - type: respond
         with: 02_request-info-install.md
 
