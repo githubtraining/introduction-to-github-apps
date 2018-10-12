@@ -1,4 +1,4 @@
-Close! The last event was pull_request, which is actually a pretty broad event title.
+Close! Since we edited the pull request title, the event that triggered this was `pull_request`. Notice that there are also `issue_comment` and `status` events being sent. 
 
 In the next exercise, we'll take a look at how apps can take general event payloads and turn those into specific responses via the API.
 
