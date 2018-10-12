@@ -158,7 +158,7 @@ steps:
            - type: respond
              with: 03_make-file-changes.md
       - type: respond
-        with: 02_change-config-success.md
+        with: 03_discovering-api-endpoints.md
 
   - title: Identify API endpoints
     description: Learn how to identify API endpoints
