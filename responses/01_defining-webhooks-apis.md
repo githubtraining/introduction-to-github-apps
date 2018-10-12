@@ -3,8 +3,8 @@ Nice job! Something changed on this repo when you added the "WIP" command. Let's
 ## Breaking down the WIP app components
 
 - **Electricity**: Since this is a Probot app, the power to run comes from deployment, set up by the app creators. We don't need to worry about this until we build an app ourselves.
-- **Standard behaviors**: GitHub has a list of [documented actions](https://developer.github.com/webhooks/#events) that can alert an app.
-- **Location**: Apps are designed to look for those actions in whichever repositories they've been installed.
+- **Standard behaviors**: GitHub has a list of [documented events](https://developer.github.com/webhooks/#events) that can alert an app.
+- **Location**: Apps are designed to look for pre-determined events in whichever repositories they've been installed. On installation, it has to ask permission for each event type that it wants to monitor. 
 - **Notification service**: If the expected action occurs, a notification delivery is sent to the app as a webhook payload -- a specific set of data transmitted via GitHub's API.
 
 GitHub Apps will then process this data in the background, responding to the repository with their expected default actions.
