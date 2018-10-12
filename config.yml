@@ -81,7 +81,7 @@ steps:
           - type: respond
             with: 02_WIP-error-message2.md
       - type: respond
-        with: 01_merge-success.md
+        with: 02_naming-webhook-events.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
