@@ -8,7 +8,7 @@ Oops! It looks like smee might not be installed successfully yet. Try the activi
 1. In [your webhooks settings]({{ repoUrl }}/settings/hooks), click **Add webhook**
 1. Paste your unique smee URL in the "Payload URL" field
 1. Leave the "Secret" field blank
-1. For "Which events would you like to trigger this webhook?", select "Send me everything"
+1. For "Which events would you like to trigger this webhook?", select "**Send me everything**"
 1. Click **Add webhook**
 1. Return to this PR and paste your smee URL as a comment
 
