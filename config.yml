@@ -128,27 +128,33 @@ steps:
     event: pull_request.opened
     link: '{{ repoUrl }}/pull/2'
     actions:
-      - type: gate
-        left: '%payload.pull_request.head.ref%'
-        operator: ===
-        right: request-info
-      - type: updateBranchProtection
-      - type: gate
-        left: '%payload.pull_request.body%'
-        operator: '==='
-        right: ""
+      - type: "gate",
+        left: "%payload.pull_request.head.ref%",
+        operator: "===",
+        right: "request-info"
+      - type: "updateBranchProtection"
+      - type: "gate",
+        left: "%payload.pull_request.body%",
+        action_id: "body_gate",
         required: false
+      - type: "gate",
+        left: "%actions.body_gate%",
+        operator: "===",
+        action_id: "first_gate",
+        right: false,
+        required: false,
         else:
-          - type: respond
-            with: 03_included-text.md
-      - type: gate
-        left: '%payload.pull_request.body%'
-        operator: '!=='
-        right: ""
-        required: false
+          - type: "respond",
+            with: "03_configuring-apps.md"
+      - type: "gate",
+        action_id: "second_gate",
+        left: "%actions.body_gate%",
+        operator: "===",
+        right: true,
+        required: false,
         else:
-          - type: respond
-            with: 03_configuring-apps.md
+          - type: "respond",
+            with: "03_included-text.md"
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the app's default behavior
