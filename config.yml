@@ -19,7 +19,7 @@ steps:
     - type: createPullRequest
       title: Trigger the app
       head: add-to-list
-      body: 01_wip-actions.md
+      body: 02_trigger-wip.md
       action_id: first_pr
     - type: respond
       with: 01_successful-close.md
@@ -42,7 +42,7 @@ steps:
         head: finish-list
         base: add-to-list
       - type: respond
-        with: 01_defining-webhooks-apis.md
+        with: 02_adding-smee.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
@@ -62,11 +62,11 @@ steps:
         right: 1
         else:
           - type: respond
-            with: smee-install-error.md
+            with: 02_smee-install-error.md
             data:
              repoUrl: '%payload.repository.html_url%'
       - type: respond
-        with: smee-install-success.md
+        with: 02_smee-install-success.md
 
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
@@ -81,7 +81,7 @@ steps:
           - type: respond
             with: 02_WIP-error-message2.md
       - type: respond
-        with: 01_merge-success.md
+        with: 02_naming-webhook-events.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
@@ -96,10 +96,10 @@ steps:
         right: '%payload.comment.body%'
         else:
           - type: respond
-            with: wip-comment-failure.md
+            with: 02_webhook-comment-failure.md
       - type: removeBranchProtection
       - type: respond
-        with: wip-comment-success.md
+        with: 02_webhook-comment-success.md
 
 
 
@@ -114,7 +114,7 @@ steps:
           - type: respond
             with: 02_accidental-close.md
       - type: respond
-        with: 01_next-pull-request.md
+        with: 02_next-pull-request.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
@@ -135,9 +135,9 @@ steps:
         required: false
         else:
           - type: respond
-            with: 02_included-text.md
+            with: 03_included-text.md
       - type: respond
-        with: 02_request-info-install.md
+        with: 03_configuring-apps.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
@@ -158,7 +158,7 @@ steps:
            - type: respond
              with: 03_make-file-changes.md
       - type: respond
-        with: 02_change-config-success.md
+        with: 03_discovering-api-endpoints.md
 
   - title: Identify API endpoints
     description: Learn how to identify API endpoints
@@ -172,14 +172,14 @@ steps:
         required: false
         else:
           - type: respond
-            with: replace-api-comment-error.md
+            with: 03_endpoint-comment-error.md
             data:
               repoUrl: '%payload.repository.html_url%'
       - type: removeBranchProtection
       - type: mergePullRequest
         pullRequest: 3
       - type: respond
-        with: replace-api-comment-success.md
+        with: 03_endpoint-comment-success.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
@@ -189,4 +189,4 @@ steps:
     link: '{{ repoUrl }}/issues/2'
     actions:
     - type: respond
-      with: 03_graceful-exit.md
+      with: 04_graceful-exit.md
