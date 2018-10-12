@@ -156,6 +156,23 @@ steps:
         else:
            - type: respond
              with: 03_make-file-changes.md
+      - type: respond
+        with: replace-me-api-response.md
+      
+  - title: Identify API endpoints
+    description: Learn how to identify API endpoints
+    event: "issue_comment.created"
+    link: '{{ repoUrl }}/pull/2'
+    actions:
+      - type: gate
+        left: 'POST /repos/:owner/:repo/labels'
+        operator: test
+        right: '%payload.comment.body%'
+        else:
+          - type: respond
+            with: replace-api-comment-error.md
+      - type: respond
+        with: replace-api-comment-error.md
       - type: removeBranchProtection
       - type: mergePullRequest
       - type: respond
