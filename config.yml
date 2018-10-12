@@ -19,7 +19,7 @@ steps:
     - type: createPullRequest
       title: Trigger the app
       head: add-to-list
-      body: 01_wip-actions.md
+      body: 02_trigger-wip.md
       action_id: first_pr
     - type: respond
       with: 01_successful-close.md
