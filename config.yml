@@ -94,6 +94,7 @@ steps:
         left: 'pull_request'
         operator: test
         right: '%payload.comment.body%'
+        required: false
         else:
           - type: removeBranchProtection
           - type: respond
