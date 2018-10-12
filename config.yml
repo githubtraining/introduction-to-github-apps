@@ -42,7 +42,7 @@ steps:
         head: finish-list
         base: add-to-list
       - type: respond
-        with: 01_defining-webhooks-apis.md
+        with: 02_adding-smee.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
