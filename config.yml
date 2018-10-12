@@ -101,7 +101,7 @@ steps:
       - type: removeBranchProtection
       - type: gate
         left: 'pull_request'
-        operator: !test
+        operator: '!test'
         right: '%payload.comment.body%'
         required: false
         else:
