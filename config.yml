@@ -137,7 +137,7 @@ steps:
           - type: respond
             with: 03_included-text.md
       - type: respond
-        with: 02_request-info-install.md
+        with: 03_configuring-apps.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the apps default behavior
