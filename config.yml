@@ -62,11 +62,11 @@ steps:
         right: 1
         else:
           - type: respond
-            with: smee-install-error.md
+            with: 02_smee-install-error.md
             data:
              repoUrl: '%payload.repository.html_url%'
       - type: respond
-        with: smee-install-success.md
+        with: 02_smee-install-success.md
 
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
