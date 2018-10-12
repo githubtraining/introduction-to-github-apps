@@ -133,10 +133,16 @@ steps:
         right: ""
         required: false
         else:
-          - type: respond
-            with: 03_included-text.md
-      - type: respond
-        with: 03_configuring-apps.md
+          type: respond
+          with: 03_included-text.md
+      - type: gate
+        left: '%payload.pull_request.body%'
+        operator: '!=='
+        right: ""
+        required: false
+        else:
+          type: respond
+          with: 03_configuring-apps.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the app's default behavior
