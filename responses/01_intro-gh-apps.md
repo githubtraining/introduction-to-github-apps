@@ -15,7 +15,7 @@ Please note that GitHub Apps are very different from OAuth Apps. These have a di
 
 ## Step 1: Get familiar with GitHub Apps
 
-To learn more about GitHub Apps, you will install two to this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
+To learn more about GitHub Apps, you will install two on this repository. Make sure to install the apps on **this** repository only. Don't apply them to everything you have access to.
 
 ### :keyboard: Activity: Install your first apps :tada:
 

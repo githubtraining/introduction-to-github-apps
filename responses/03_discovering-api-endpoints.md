@@ -1,6 +1,6 @@
 Nice job!
 
-In the last pull request, we learned about webhooks and how the WIP and Request info apps only respond to specific events. Webhooks allow you to build or set up GitHub Apps which subscribe to certain events on GitHub.  When one of those events is triggered, an HTTP POST payload response is sent to the webhook's configured URL. We saw this with our smee.io webhook.
+In the last pull request, we learned about webhooks and how the WIP and Request Info apps only respond to specific events. Webhooks allow you to build or set up GitHub Apps which subscribe to certain events on GitHub.  When one of those events is triggered, an HTTP POST payload response is sent to the webhook's configured URL. We saw this with our smee.io webhook.
 
 But webhooks are only one side to this story. To see the other side, meet API endpoints. :wave:
 

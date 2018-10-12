@@ -1,7 +1,7 @@
 ## Request Info app
 When a user opens an empty issue or pull request, the Request Info app will do exactly that -- request some more information.
 
-You can see that request info has already responded to this pull request with a default message.
+You can see that Request Info has already responded to this pull request with a default message.
 
 ## Configuration files
 Per the app installation instructions, this app requires a `.github/config.yml` file for it to respond with a default message. I've already included that in this pull request for you. Some apps use these, and some don't use them at all. Some apps might use a `.json` file, while others might ask you to store configuration settings in a `.md` file.
