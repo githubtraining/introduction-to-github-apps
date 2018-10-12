@@ -172,7 +172,7 @@ steps:
           - type: respond
             with: replace-api-comment-error.md
       - type: respond
-        with: replace-api-comment-error.md
+        with: replace-api-comment-success.md
       - type: removeBranchProtection
       - type: mergePullRequest
       - type: respond
