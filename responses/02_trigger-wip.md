@@ -1,6 +1,6 @@
 ## Triggering GitHub Apps
 
-Actions that a person or tool takes on GitHub can be used to trigger events. Creating a issue, making a commit, or leaving a comment, to name a few, are logged on GitHub. If GitHub doesn't use it, it can still be useful to other applications.
+Actions that a person or tool takes on GitHub can be used to trigger events. Creating an issue, making a commit, or leaving a comment, to name a few, are logged on GitHub. If GitHub doesn't use it, it can still be useful to other applications.
 
 When you install an app, you give the app permission to receive some of this data from GitHub. That data allows the apps to react in ways that are useful to you. You can also allow the app to send information back, or change information completely.
 
