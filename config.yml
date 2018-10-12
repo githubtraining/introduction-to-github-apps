@@ -96,10 +96,10 @@ steps:
         right: '%payload.comment.body%'
         else:
           - type: respond
-            with: wip-comment-failure.md
+            with: 02_webhook-comment-failure.md
       - type: removeBranchProtection
       - type: respond
-        with: wip-comment-success.md
+        with: 02_webhook-comment-success.md
 
 
 
