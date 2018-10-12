@@ -99,8 +99,14 @@ steps:
           - type: respond
             with: 02_webhook-comment-failure.md
       - type: removeBranchProtection
-      - type: respond
-        with: 02_webhook-comment-success.md
+      - type: gate
+        left: 'pull_request'
+        operator: !test
+        right: '%payload.comment.body%'
+        required: false
+        else:
+          - type: respond
+            with: 02_webhook-comment-success.md
 
   - title: Merge the first pull request
     description: Merge the first pull request of the course
