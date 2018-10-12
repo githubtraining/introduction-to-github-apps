@@ -114,7 +114,7 @@ steps:
           - type: respond
             with: 02_accidental-close.md
       - type: respond
-        with: 01_next-pull-request.md
+        with: 02_next-pull-request.md
         data:
          repoUrl: '%payload.repository.html_url%'
 
