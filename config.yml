@@ -133,10 +133,16 @@ steps:
         right: ""
         required: false
         else:
-          - type: respond
-            with: 03_included-text.md
-      - type: respond
-        with: 03_configuring-apps.md
+          type: respond
+          with: 03_included-text.md
+      - type: gate
+        left: '%payload.pull_request.body%'
+        operator: '!=='
+        right: ""
+        required: false
+        else:
+          type: respond
+          with: 03_configuring-apps.md
 
   - title: Customize the response of the Request Info app
     description: Learn how to customize the app's default behavior
@@ -177,10 +183,16 @@ steps:
       - type: removeBranchProtection
       - type: mergePullRequest
         pullRequest: 3
-      - type: respond
-        with: 03_endpoint-comment-success.md
-        data:
-         repoUrl: '%payload.repository.html_url%'
+      - type: gate
+        left: 'POST /repos/:owner/:repo/labels'
+        operator: '!test'
+        right: '%payload.comment.body%'
+        required: false
+        else:
+          - type: respond
+            with: 03_endpoint-comment-success.md
+            data:
+              repoUrl: '%payload.repository.html_url%'
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
