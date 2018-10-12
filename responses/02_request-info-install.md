@@ -8,6 +8,8 @@ Per the app installation instructions, this app requires a `.github/config.yml` 
 
 This allows you to take default templates and extend them to your own projects.
 
+## Step 8: Configure apps
+
 Let's use your default template to learn about APIs. First, make a simple change to the standard message.
 
 ### :keyboard: Activity: Change the default message of your config.yml file

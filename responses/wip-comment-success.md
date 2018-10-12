@@ -2,6 +2,8 @@ Perfect! As you might guess, pull_request is a broad event.
 
 In the next exercise, we'll take a look at how apps can take general event payloads and turn those into specific responses via the API.
 
+## Step 6: Merging
+
 After you removed WIP from the pull request title, the pull request was unblocked. Now, you're able to merge.
 
 ### :keyboard: Activity: Merge

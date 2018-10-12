@@ -12,10 +12,11 @@ For example, this is the endpoint to create a new pull request; `POST /repos/:ow
 
 When an event is triggered, the vastly more detailed GitHub API gives the bot an excessive amount of information (as a payload). The bot takes this payload, alters it slightly, and hands it back to GitHub's API, which delivers the change back to your repository.
 
+## Step 9: Learn more about the GitHub API
 
 ### :keyboard: Activity: Discovering endpoints
 
-1. Navigate to [this list](https://developer.github.com/v3/apps/available-endpoints/) 
+1. Navigate to [this list](https://developer.github.com/v3/apps/available-endpoints/)
 2. Find the endpoint that an app would use to create a label
 3. Post that endpoint as a comment
 

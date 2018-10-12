@@ -9,6 +9,8 @@ Let's breakdown how WIP works:
 2. When a pull request title changes, the app searches for the key-word, **"WIP"**
 3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
 
+## Step 4: Watching for webhooks
+
 Let's use this next activity to find out what's happening behind the scenes.
 
 ### :keyboard: Activity: Remove WIP from pull request title
