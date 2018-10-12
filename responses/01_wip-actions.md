@@ -17,7 +17,7 @@ An app is like a home security system. It's equipped to watch your house at all 
 
 Just like a home security system, a GitHub App only watches for specific behaviors, and then responds in predetermined ways.
 
-## The WIP app
+## Step 2: Trigger the WIP app
 
 **WIP** is a common abbreviation to mean **work in progress**.
 

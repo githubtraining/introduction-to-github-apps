@@ -1,4 +1,4 @@
-Nice work adding smee!
+Nice work adding smee.io!
 
 ## WIP on the surface
 When you added "WIP" to the title of this pull request, something changed. Do you see that the pull request's status is "pending" with a yellow dot? This is to block merging while the title includes "WIP".
@@ -8,6 +8,8 @@ Let's breakdown how WIP works:
 1. The app listens specifically for a change to a pull request title
 2. When a pull request title changes, the app searches for the key-word, **"WIP"**
 3. If the search finds "WIP", the app sends a request to GitHub's API to block merging in that pull request
+
+## Step 4: Watching for webhooks
 
 Let's use this next activity to find out what's happening behind the scenes.
 
