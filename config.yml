@@ -156,12 +156,29 @@ steps:
         else:
            - type: respond
              with: 03_make-file-changes.md
-      - type: removeBranchProtection
-      - type: mergePullRequest
       - type: respond
         with: 02_change-config-success.md
+
+  - title: Identify API endpoints
+    description: Learn how to identify API endpoints
+    event: "issue_comment.created"
+    link: '{{ repoUrl }}/pull/2'
+    actions:
+      - type: gate
+        left: 'POST /repos/:owner/:repo/labels'
+        operator: test
+        right: '%payload.comment.body%'
+        else:
+          - type: respond
+            with: replace-api-comment-error.md
+            data:
+             repoUrl: '%payload.repository.html_url%'
+      - type: respond
+        with: replace-api-comment-success.md
         data:
          repoUrl: '%payload.repository.html_url%'
+      - type: removeBranchProtection
+      - type: mergePullRequest
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
