@@ -1,4 +1,4 @@
-Nice work adding smee!
+Nice work adding smee.io!
 
 ## WIP on the surface
 When you added "WIP" to the title of this pull request, something changed. Do you see that the pull request's status is "pending" with a yellow dot? This is to block merging while the title includes "WIP".

@@ -1,6 +1,6 @@
 ## WIP below the surface
 
-Since installation, smee has been running patiently in the background and keeping a ledger of each webhook event that we've performed on the repository.
+Since installation, smee.io has been running patiently in the background and keeping a ledger of each webhook event that we've performed on the repository.
 
 When you edited the pull request title, that triggered a specific type of event.
 
