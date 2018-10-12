@@ -12,11 +12,9 @@ Can you tell which type of event was sent back to the application when you chang
 
 ### :keyboard: Activity: Connecting actions on GitHub to events and payloads
 
-1. Return to your unique smee.io link
-    - Closed your window? Scroll up to your comment above - it's the same URL
-1. Find the names of the triggered webhook events
-1. Comment in this pull request with the name of webhook event, exactly as it's written in smee.io
-1. Refresh if you don't see a response from me before merging
+1. Return to your unique smee.io link, accessible via your [settings]({{ repoUrl }}/settings/hooks) if you closed it
+1. Identify the webhook event that was triggered. Remember, you edited the pull request title
+1. Post the event exactly as it's written in smee.io in a comment on this pull request
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
