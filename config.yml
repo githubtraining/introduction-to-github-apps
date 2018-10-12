@@ -183,10 +183,16 @@ steps:
       - type: removeBranchProtection
       - type: mergePullRequest
         pullRequest: 3
-      - type: respond
-        with: 03_endpoint-comment-success.md
-        data:
-         repoUrl: '%payload.repository.html_url%'
+      - type: gate
+        left: 'POST /repos/:owner/:repo/labels'
+        operator: !test
+        right: '%payload.comment.body%'
+        required: false
+        else:
+          - type: respond
+            with: 03_endpoint-comment-success.md
+            data:
+              repoUrl: '%payload.repository.html_url%'
 
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
