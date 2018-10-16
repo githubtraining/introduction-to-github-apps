@@ -29,7 +29,7 @@ steps:
   - title: Trigger the WIP app
     description: Once installed, learn how to interact with the app
     event: "pull_request.edited"
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: '%payload.pull_request.title%'
@@ -49,7 +49,7 @@ steps:
   - title: Add a webhook
     description: Add a smee.io URL to your repository's webhooks
     event: "issue_comment.created"
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: octokit
         method: repos.getHooks
@@ -71,7 +71,7 @@ steps:
   - title: Remove WIP from the title
     description: Interact with the WIP app by removing WIP from the title
     event: pull_request.edited
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: '/\WIP/g'
@@ -88,7 +88,7 @@ steps:
   - title: Determine which event triggered the WIP app
     description: Examine the smee.io URL and determine which event name caused the app to respond
     event: "issue_comment.created"
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: 'pull_request'
@@ -111,7 +111,7 @@ steps:
   - title: Merge the first pull request
     description: Merge the first pull request of the course
     event: pull_request.closed
-    link: '{{ repoUrl }}/pull/1'
+    link: '{{ repoUrl }}/pull/2'
     actions:
       - type: gate
         left: '%payload.pull_request.merged%'
@@ -126,7 +126,7 @@ steps:
   - title: Open a pull request
     description: Open a pull request to learn about the Request Info app
     event: pull_request.opened
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/3'
     actions:
       - type: "gate"
         left: "%payload.pull_request.head.ref%"
@@ -159,7 +159,7 @@ steps:
   - title: Customize the response of the Request Info app
     description: Learn how to customize the app's default behavior
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/3'
     actions:
       - type: octokit
         method: pullRequests.getFiles
@@ -180,7 +180,7 @@ steps:
   - title: Identify API endpoints
     description: Learn how to identify API endpoints
     event: "issue_comment.created"
-    link: '{{ repoUrl }}/pull/2'
+    link: '{{ repoUrl }}/pull/3'
     actions:
       - type: gate
         left: 'POST /repos/:owner/:repo/labels'
@@ -209,7 +209,7 @@ steps:
   - title: Open a blank issue
     description: Open a blank issue to see your config changes take effect
     event: issue_comment.created
-    link: '{{ repoUrl }}/issues/2'
+    link: '{{ repoUrl }}/issues/4'
     actions:
     - type: respond
       with: 04_graceful-exit.md
