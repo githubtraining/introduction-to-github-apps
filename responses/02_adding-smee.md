@@ -9,6 +9,8 @@ Nice job! Something changed on this repo when you added the "WIP" command. Let's
 
 GitHub Apps will then process this data in the background, responding to the repository with their expected default actions.
 
+For more information about webhooks, we recommend this [GitHub Community Forum](https://github.community/t5/GitHub-Enterprise-Best-Practices/Scalable-Continuous-Integration-CI-Patterns/ba-p/11270) article. 
+
 ## Step 3:  Looking under the hood
 
 For the next exercise, let's add our own notification service to get a better idea of what apps are receiving behind the scenes.
