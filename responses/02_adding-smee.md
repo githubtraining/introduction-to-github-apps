@@ -9,6 +9,8 @@ Nice job! Something changed on this repo when you added the "WIP" command. Let's
 
 GitHub Apps will then process this data in the background, responding to the repository with their expected default actions.
 
+_Extra credit: For more information about webhooks, we recommend this [GitHub Community Forum](https://github.community/t5/GitHub-Enterprise-Best-Practices/Scalable-Continuous-Integration-CI-Patterns/ba-p/11270) article._
+
 ## Step 3:  Looking under the hood
 
 For the next exercise, let's add our own notification service to get a better idea of what apps are receiving behind the scenes.
@@ -24,7 +26,7 @@ For the next exercise, let's add our own notification service to get a better id
 1. Leave the "Secret" field blank
 1. For "Which events would you like to trigger this webhook?", select **Send me everything**
 1. Click **Add webhook**
-1. Return to this PR and paste your smee.io URL as a comment
+1. Return to this pull request and paste your smee.io URL as a comment
 
 <hr>
 <h3 align="center">Look for my response in a comment on this pull request</h3>
