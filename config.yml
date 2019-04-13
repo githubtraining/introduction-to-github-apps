@@ -52,7 +52,7 @@ steps:
     link: '{{ repoUrl }}/pull/2'
     actions:
       - type: octokit
-        method: repos.getHooks
+        method: repos.listHooks
         owner: '%payload.repository.owner.login%'
         repo: '%payload.repository.name%'
         action_id: hooks
