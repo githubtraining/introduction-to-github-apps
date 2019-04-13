@@ -162,7 +162,7 @@ steps:
     link: '{{ repoUrl }}/pull/3'
     actions:
       - type: octokit
-        method: pullRequests.getFiles
+        method: pullRequests.listFiles
         owner: '%payload.repository.owner.login%'
         repo: '%payload.repository.name%'
         number: '%payload.pull_request.number%'
