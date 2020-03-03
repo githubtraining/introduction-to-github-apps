@@ -1,10 +1,36 @@
-Meet GitHub Apps—the best way to extend your GitHub workflow. Automate repetitive tasks to save you time (and headspace) and reduce friction in your project.
+Meet GitHub Apps — the best way to extend your GitHub workflow. Automate repetitive tasks to save you time (and headspace) and reduce friction in your project.
 
-In this course, you’ll learn how to:
 
+This course guides you through the steps to install and trigger GitHub Apps, utilize webhooks, and leverage the GitHub's APIs. 
+
+## What you'll learn
+
+We'll answer common questions like:
+- What are GitHub Apps and how are they structured?
+- How do GitHub Apps fit into the software development lifecycle (SDLC) and the greater ecosystem?
+- How do you use the GitHub APIs?
+- What are webhooks and how are they used?
+
+And when you're done you'll be able to:
 - Install Probot apps onto your repository
 - Put GitHub webhooks to use
-- Get started with GitHub's APIs
-- Work with GitHub Apps -- understanding what they are, their place in the development ecosystem, and how they're structured
+- Utilize GitHub's APIs
+- Install GitHub Apps and work with them
 
-This course has a dedicated message board on the [GitHub Community Forum]({{ communityBoard }}). Create a post to start a conversation, discuss this course with GitHub Trainers and participants, or troubleshoot any issues you encounter.  
+
+## What you'll build
+In this course, we'll be implementing several GitHub Apps, introducing the GitHub APIs, and learning how to utilize webhooks:
+
+![smee](https://user-images.githubusercontent.com/57373296/75803842-125a6380-5d4d-11ea-9bef-8b317d1ab300.gif)
+
+
+## Prerequisites
+We recommend taking [Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) prior to this course. 
+
+## Projects used
+This course makes use of the [leereilly/games](https://github.com/leereilly/games) repository.  Consider exploring this repo and maybe even making contributions!
+
+
+## Audience
+
+Developers, new GitHub users, users new to Git, students, teams
