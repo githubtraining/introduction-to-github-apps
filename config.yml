@@ -1,5 +1,8 @@
 title: Getting started with GitHub Apps
 description: Add your own GitHub feature, automate workflows, and more with GitHub Apps.
+tags: [
+  "webhooks", "API", "GitHub Apps"
+]
 template:
   name: getting-started-github-apps
   repo: games
