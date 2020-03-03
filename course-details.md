@@ -25,7 +25,7 @@ In this course, we'll be implementing several GitHub Apps, introducing the GitHu
 
 
 ## Prerequisites
-We recommend taking the [Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) Learning Lab prior to this course. 
+We recommend taking [Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) prior to this course. 
 
 ## Projects used
 This course makes use of the [leereilly/games](https://github.com/leereilly/games) repository.  Consider exploring this repo and maybe even making contributions!
