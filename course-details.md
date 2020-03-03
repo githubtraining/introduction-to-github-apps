@@ -7,7 +7,7 @@ This course guides you through the steps to install and trigger GitHub Apps, uti
 
 We'll answer common questions like:
 - What are GitHub Apps and how are they structured?
-- How do GitHub Apps fit into the SDLC and the greater ecosystem?
+- How do GitHub Apps fit into the software development lifecycle (SDLC) and the greater ecosystem?
 - How do you use the GitHub APIs?
 - What are webhooks and how are they used?
 
