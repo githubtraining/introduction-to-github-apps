@@ -1,6 +1,6 @@
 ## GitHub Enterprise Server (GHES) installation notes
 
-✅ | This course is compatible with supported versions* of GHES.
+✅ | This course is compatible with supported versions* of GHES, but requires access to outside integrations: <a href="https://probot.github.io/apps/request-info/" target="_blank">Request Info app</a> and https://smee.io/. 
 --- | ---
 
 *Supported versions of GHES are visible by using the drop-down in the [official documentation](https://help.github.com/enterprise/).
