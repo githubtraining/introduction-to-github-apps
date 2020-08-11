@@ -185,7 +185,7 @@ steps:
     link: '{{ repoUrl }}/pull/3'
     actions:
       - type: gate
-        left: 'POST /repos/:owner/:repo/labels'
+        left: 'POST /repos/{owner}/{repo}/labels'
         operator: test
         right: '%payload.comment.body%'
         required: false
@@ -198,7 +198,7 @@ steps:
       - type: mergePullRequest
         pullRequest: 3
       - type: gate
-        left: 'POST /repos/:owner/:repo/labels'
+        left: 'POST /repos/{owner}/{repo}/labels'
         operator: '!test'
         right: '%payload.comment.body%'
         required: false
