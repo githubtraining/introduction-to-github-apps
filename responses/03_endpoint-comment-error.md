@@ -1,4 +1,4 @@
-Nice try! The label creation endpoint, found [here](https://developer.github.com/v3/issues/labels/#create-a-label), looks like this: `POST /repos/:owner/:repo/labels`.
+Nice try! The label creation endpoint, found [here](https://docs.github.com/en/rest/reference/issues#create-a-label), looks like this: `POST /repos/{owner}/{repo}/labels`.
 
 ## APIs and Webhooks
 APIs and Webhooks go hand in hand, but the distinction between them is important.
