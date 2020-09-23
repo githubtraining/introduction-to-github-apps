@@ -16,8 +16,8 @@ When an event is triggered, the vastly more detailed GitHub API gives the bot an
 
 ### :keyboard: Activity: Discovering endpoints
 
-1. Navigate to [this list](https://developer.github.com/v3/apps/available-endpoints/)
-2. Find the endpoint that an app would use to create a label
+1. Navigate to [this list](https://docs.github.com/en/rest/overview/endpoints-available-for-github-apps)
+2. Find the endpoint that an app would use to create a label on an Issue
 3. Post that endpoint as a comment
 
 <hr>
