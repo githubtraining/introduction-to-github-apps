@@ -11,7 +11,7 @@ There are many types of applications, like the apps you might have on your phone
 
 GitHub Apps allow you to change GitHub's surface-level functionality through webhooks and GitHub's APIs. GitHub Apps act as top-layer tools that you can use to customize and automate routine processes.
 
-Please note that GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://developer.github.com/apps/differences-between-apps/).
+Please note that GitHub Apps are very different from OAuth Apps. These have a different installation flow and have different rules around how they handle their data and access. If you'd like to learn more, check out the documentation on [the differences between GitHub and OAuth Apps](https://docs.github.com/apps/differences-between-apps/).
 
 ## Step 1: Get familiar with GitHub Apps
 
