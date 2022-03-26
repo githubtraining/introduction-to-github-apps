@@ -19,7 +19,7 @@ And when you're done you'll be able to:
 
 
 ## What you'll build
-In this course, we'll be implementing several GitHub Apps, introducing the GitHub APIs, and learning how to utilize webhooks:
+In this course, we'll be integrating several GitHub Apps, introducing the GitHub APIs, and learning how to utilize webhooks:
 
 ![smee](https://user-images.githubusercontent.com/57373296/75803842-125a6380-5d4d-11ea-9bef-8b317d1ab300.gif)
 
